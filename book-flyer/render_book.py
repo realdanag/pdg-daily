@@ -17,7 +17,7 @@ IC = json.load(open(f'{D}/icons.json'))
 
 
 def icons():
-    return ''.join(f'<svg viewBox="0 0 24 24" width="24" height="24" style="color:#022452">{IC[k]}</svg>' for k in ('IG', 'TT', 'LI'))
+    return ''.join(f'<svg viewBox="0 0 24 24" width="24" height="24" style="color:#022452">{IC[k]}</svg>' for k in ('IG',))
 
 
 def line(text, cap, color, dot=False, track=0.02):
@@ -75,7 +75,7 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M
 </style></head><body>
 <svg class="a" viewBox="252 255 749 664" style="right:-300px;top:560px;width:760px;opacity:.045"><path fill="#022452" fill-rule="evenodd" d="{MK['nodot']}"/><path fill="#022452" d="{MK['dot']}"/></svg>
 <div class="a" style="left:72px;top:64px">{logo}</div>
-<div class="a" style="right:72px;top:80px;display:flex;align-items:center;gap:12px;font-weight:700;font-size:24px">{icons()}<span style="margin-left:4px">realdanag</span></div>
+<div class="a" style="right:72px;top:80px;display:flex;align-items:center;gap:12px;font-weight:700;font-size:24px">{icons()}<span style="margin-left:4px">thedanagstudio</span></div>
 <div class="a" style="left:72px;top:222px"><div class="ey">{eyebrow.upper()}</div>
 <div style="margin-top:30px">{l1svg}</div>
 <div id="box" style="margin-top:28px">{l2svg}</div>
@@ -83,7 +83,7 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M
 <div class="a" style="left:72px;right:72px;top:850px;display:grid;grid-template-columns:1fr 1fr;column-gap:56px">{svc}</div>
 <div class="a" style="left:0;right:0;bottom:0;height:210px;background:linear-gradient(135deg,#032F65 0%,#022452 45%,#011631 80%,#010F21 100%)"></div>
 <div class="a" style="left:72px;bottom:66px;height:78px;padding:0 44px;border-radius:40px;background:#FFC107;display:flex;align-items:center;font-weight:900;font-size:28px;letter-spacing:3px">BOOK NOW</div>
-<div class="a" style="right:72px;bottom:58px;text-align:right;color:#fff"><div style="font-weight:900;font-size:34px">+233 (0)50 332 0548</div><div style="font-weight:500;font-size:22px;opacity:.85;margin-top:8px">realprincedanag@gmail.com &nbsp;|&nbsp; @realdanag</div></div>
+<div class="a" style="right:72px;bottom:58px;text-align:right;color:#fff"><div style="font-weight:900;font-size:34px">+233 (0)50 332 0548</div><div style="font-weight:500;font-size:22px;opacity:.85;margin-top:8px">realprincedanag@gmail.com &nbsp;|&nbsp; @thedanagstudio</div></div>
 </body></html>"""
 
 

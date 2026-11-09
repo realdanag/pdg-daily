@@ -1,4 +1,4 @@
-# PDG Daily Flyers (@realdanag)
+# DANAG STUDIO Daily Flyers (Instagram @thedanagstudio)
 
 Daily greeting flyers for Prince Danag Graficz, 1080x1350 layout rendered at 2x (2160x2700 HD).
 
@@ -12,5 +12,5 @@ l1 (white bold line), l2 (gold bold line), body (one or two sentence message).
 
 ## Brand rules
 - Colors: navy gradient #032F65 to #010F21, gold #FFC107, white. Fonts: Montserrat, Sacramento script.
-- Footer: clean gold band (option A) with navy @realdanag handle and tagline.
-- Captions: clean and classic, no emojis ever, max 5 hashtags, always include #realdanag.
+- Footer: clean gold band (option A) with Instagram icon + navy @thedanagstudio handle and tagline.
+- Captions: clean and classic, no emojis ever, max 5 hashtags, always include #thedanagstudio (never #realdanag or #PrinceDanagGraficz).

@@ -39,7 +39,7 @@ if spec.get("example_title"):
     S.append(f'''<div class="a" style="left:96px;right:96px;top:200px"><div class="k">REAL EXAMPLE</div><h1 style="margin-top:20px">{spec["example_title"]}<i>.</i></h1></div>
 <div class="a" style="left:96px;right:96px;top:540px;height:520px;border-radius:28px;overflow:hidden;background:linear-gradient(135deg,#032F65,#011631);box-shadow:0 20px 40px rgba(2,36,82,.25);color:#fff;padding:60px">{spec.get("example_html","")}</div>''')
 S.append(f'''<div class="a" style="left:0;right:0;top:250px;display:flex;justify-content:center"><img src="__CLOSELOGO__" style="width:420px"></div>
-<div class="a" style="left:96px;right:96px;top:840px;text-align:center"><h1 style="font-size:80px">Save this for<br>your next design<i>.</i></h1><p style="margin-top:24px">Follow @realdanag for design tips every week.</p></div>''')
+<div class="a" style="left:96px;right:96px;top:840px;text-align:center"><h1 style="font-size:80px">Save this for<br>your next design<i>.</i></h1><p style="margin-top:24px">Follow @thedanagstudio for design tips every week.</p></div>''')
 assert len(S)<=10
 T=len(S)
 with sync_playwright() as pw:
@@ -48,7 +48,7 @@ with sync_playwright() as pw:
         th='n' if i%2 else 'w'; logo=K/f'DANAG-STUDIO-horizontal-{"on-navy" if th=="n" else "on-white"}.svg'
         html=f'''<!DOCTYPE html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="s {th}">
 <div class="hd"><span><img src="{logo.as_uri()}" style="height:44px;margin-top:-10px"></span><span>DESIGN TIPS · {i:02d}/{T}</span></div>{inner}
-<div class="ft"><span>@realdanag</span><span>{"Save for later" if i==T else "Swipe &rarr;"}</span></div></div></body></html>'''
+<div class="ft"><span>@thedanagstudio</span><span>{"Save for later" if i==T else "Swipe &rarr;"}</span></div></div></body></html>'''
         html=html.replace('__CLOSELOGO__',(K/('DANAG-STUDIO-stacked-on-navy.svg' if th=='n' else 'DANAG-STUDIO-stacked-on-white.svg')).as_uri())
         tmp=out/f'_s{i}.html'; tmp.write_text(html); pg.goto(tmp.as_uri()); pg.wait_for_timeout(600)
         pg.evaluate("document.querySelectorAll('.fit').forEach(e=>{let s=parseFloat(getComputedStyle(e).fontSize);while(e.scrollWidth>888&&s>60){s-=4;e.style.fontSize=s+'px'}})"); pg.wait_for_timeout(100); pg.screenshot(path=str(out/f'{i:02d}.png')); tmp.unlink()
