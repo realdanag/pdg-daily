@@ -21,6 +21,8 @@ CSS=f'''@font-face{{font-family:M;font-weight:500;src:url({(F/"montserrat-latin-
 h1{{font-weight:900;font-size:84px;line-height:1.02;letter-spacing:-2px}}h1 i{{font-style:normal;color:#FFC107}}
 p{{font-weight:500;font-size:30px;line-height:1.5}}.w p{{color:#33415c}}.n p{{color:rgba(255,255,255,.82)}}.a{{position:absolute}}'''
 NUM=json.load(open(K/'numerals.json'))
+MK=json.load(open(K/'mark.json'))
+def bgmark(th): return f'<svg class="a" viewBox="252 255 749 664" style="right:-260px;bottom:-60px;width:820px;opacity:{.05 if th=="n" else .045}"><path fill="{"#fff" if th=="n" else "#022452"}" fill-rule="evenodd" d="{MK["nodot"]}"/><path fill="{"#fff" if th=="n" else "#022452"}" d="{MK["dot"]}"/></svg>'
 def big(txt,size,color='#FFC107'):
     """Gobold High outlines for numerals; other text falls back to Anton."""
     if not all(c in NUM['g'] for c in txt):
@@ -46,7 +48,7 @@ with sync_playwright() as pw:
     b=pw.chromium.launch(executable_path='/usr/bin/google-chrome'); pg=b.new_page(viewport={'width':1080,'height':1350},device_scale_factor=2)
     for i,inner in enumerate(S,1):
         th='n' if i%2 else 'w'; logo=K/f'DANAG-STUDIO-horizontal-{"on-navy" if th=="n" else "on-white"}.svg'
-        html=f'''<!DOCTYPE html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="s {th}">
+        html=f'''<!DOCTYPE html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="s {th}">{bgmark(th) if i<T else ""}
 <div class="hd"><span><img src="{logo.as_uri()}" style="height:44px;margin-top:-10px"></span><span>DESIGN TIPS · {i:02d}/{T}</span></div>{inner}
 <div class="ft"><span>@thedanagstudio</span><span>{"Save for later" if i==T else "Swipe &rarr;"}</span></div></div></body></html>'''
         html=html.replace('__CLOSELOGO__',(K/('DANAG-STUDIO-stacked-on-navy.svg' if th=='n' else 'DANAG-STUDIO-stacked-on-white.svg')).as_uri())
