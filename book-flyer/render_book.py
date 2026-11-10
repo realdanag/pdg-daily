@@ -16,6 +16,8 @@ D = os.path.dirname(os.path.abspath(__file__)); R = os.path.dirname(D)
 G = json.load(open(f'{D}/gobold_bold_outlines.json'))
 MK = json.load(open(f'{D}/mark.json'))
 IC = json.load(open(f'{D}/icons.json'))
+sys.path.insert(0, D)
+from contacts import contacts
 
 
 def icons(c='#022452'):
@@ -30,11 +32,20 @@ def line(text, cap, color, dot=False, track=0.02, dot_color='#fff'):
         x += g['w'] + track * G['upm']
     x -= track * G['upm']
     w = x * s; extra = ''
+    GR = {'#022452': [('0', '#032F65'), ('.45', '#022452'), ('.8', '#011631'), ('1', '#010F21')],
+          '#FFC107': [('0', '#FFD54F'), ('.55', '#FFC107'), ('1', '#E3A600')],
+          '#fff': [('0', '#ffffff'), ('1', '#dfe6f2')]}
+    gid = 'g' + str(abs(hash(text + color)))
+    defs = ''
+    if color in GR:
+        stops = ''.join(f'<stop offset="{o}" stop-color="{c}"/>' for o, c in GR[color])
+        defs = f'<defs><linearGradient id="{gid}" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{0 if color != "#022452" else 0}" y2="{-G["cap"]}">{stops}</linearGradient></defs>'
+        color = f'url(#{gid})'
     if dot:
         r = cap * 0.085; gap = cap * 0.07
         extra = f'<circle cx="{w + gap + r:.2f}" cy="{cap - r:.2f}" r="{r:.2f}" fill="{dot_color}"/>'
         w += gap + 2 * r
-    return (f'<svg class="hs" width="{w:.1f}" height="{cap:.1f}" viewBox="0 0 {w:.1f} {cap:.1f}" style="display:block;overflow:visible">'
+    return (f'<svg class="hs" width="{w:.1f}" height="{cap:.1f}" viewBox="0 0 {w:.1f} {cap:.1f}" style="display:block;overflow:visible">{defs}'
             f'<g fill="{color}" transform="translate(0,{cap:.2f}) scale({s:.6f},{-s:.6f})">{paths}</g>{extra}</svg>')
 
 
@@ -86,7 +97,7 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M
 </style></head><body>
 <svg class="a" viewBox="252 255 749 664" style="right:-300px;top:560px;width:760px;opacity:.045"><path class="mk" fill="#022452" fill-rule="evenodd" d="{MK['nodot']}"/><path class="mk" fill="#022452" d="{MK['dot']}"/></svg>
 <div class="a" style="left:72px;top:64px">{logo}</div>
-<div class="a" style="right:72px;top:80px;display:flex;align-items:center;gap:12px;font-weight:700;font-size:24px">{icons('#fff' if dark else '#022452')}<span style="margin-left:4px">thedanagstudio</span></div>
+<div class="a" style="right:72px;top:72px;font-weight:700;font-size:21px">{contacts('#022452' if dark else '#fff', '#FFC107' if dark else '#022452', '#fff' if dark else '#022452', 34, phone=False)}</div>
 <div class="a" style="left:72px;top:222px"><div class="ey">{eyebrow.upper()}</div>
 <div style="margin-top:30px">{l1svg}</div>
 <div id="box" style="margin-top:28px">{l2svg}</div>
@@ -94,7 +105,7 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M
 <div class="a" style="left:72px;right:72px;top:850px;display:grid;grid-template-columns:1fr 1fr;column-gap:56px">{svc}</div>
 <div class="a" id="foot" style="left:0;right:0;bottom:0;height:210px;background:linear-gradient(135deg,#032F65 0%,#022452 45%,#011631 80%,#010F21 100%)"></div>
 <div class="a" id="bk" style="left:72px;bottom:66px;height:78px;padding:0 44px;border-radius:40px;background:#FFC107;display:flex;align-items:center;font-weight:900;font-size:28px;letter-spacing:3px">BOOK NOW</div>
-<div class="a" id="ct" style="right:72px;bottom:58px;text-align:right;color:#fff"><div style="font-weight:900;font-size:34px">+233 (0)50 332 0548</div><div style="font-weight:500;font-size:22px;opacity:.85;margin-top:8px">realprincedanag@gmail.com &nbsp;|&nbsp; @thedanagstudio</div></div>
+<div class="a" id="ct" style="right:72px;bottom:58px;text-align:right;color:#fff"><div style="font-weight:900;font-size:34px">+233 (0)50 332 0548</div><div style="font-weight:500;font-size:22px;opacity:.85;margin-top:8px">realprincedanag@gmail.com</div></div>
 </body></html>"""
 
 
