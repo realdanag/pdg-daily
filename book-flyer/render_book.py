@@ -42,7 +42,7 @@ def line(text, cap, color, dot=False, track=0.02, dot_color='#fff'):
         defs = f'<defs><linearGradient id="{gid}" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{0 if color != "#022452" else 0}" y2="{-G["cap"]}">{stops}</linearGradient></defs>'
         color = f'url(#{gid})'
     if dot:
-        r = cap * 0.085; gap = cap * 0.07
+        r = cap * 0.115; gap = cap * 0.07
         extra = f'<circle cx="{w + gap + r:.2f}" cy="{cap - r:.2f}" r="{r:.2f}" fill="{dot_color}"/>'
         w += gap + 2 * r
     return (f'<svg class="hs" width="{w:.1f}" height="{cap:.1f}" viewBox="0 0 {w:.1f} {cap:.1f}" style="display:block;overflow:visible">{defs}'
