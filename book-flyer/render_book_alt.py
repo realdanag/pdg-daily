@@ -90,7 +90,7 @@ def layout_B(ey, l1, l2, theme):
     big = rb.line(l2, rb.fit(l2, 760, 150, True), GOLD if dark else '#022452', True, dot_color='#fff' if dark else GOLD)
     grid = ''.join(f'<div style="background:url({pathlib.Path(w).as_uri()}) center/cover;border-radius:6px"></div>' for w in WORK[:12])
     monitor = f"""<div style="width:936px;margin:0 auto">
-  <div style="background:#0b1424;border-radius:22px;padding:18px 18px 34px;box-shadow:0 30px 60px rgba(1,15,33,.35)">
+  <div style="background:#0b1424;border-radius:22px;padding:18px 18px 34px;box-shadow:0 30px 60px rgba(1,15,33,.35){",0 0 0 2px rgba(255,255,255,.22)" if dark else ""}">
    <div style="background:#13213a;border-radius:8px;padding:14px;display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:181px;gap:10px">{grid}</div>
   </div>
   <div style="width:150px;height:46px;margin:0 auto;background:linear-gradient(#0b1424,#1c2a44)"></div>
@@ -128,7 +128,7 @@ def layout_C(ey, l1, l2, theme):
   <text font-family="M" font-weight="700" font-size="14.5" letter-spacing="2.4" fill="#022452"><textPath href="#rc">{ring}{ring}</textPath></text></svg>
   <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:900;font-size:30px;line-height:1;color:#022452">BOOK<br>NOW</div>
  </div>"""
-    phone = f"""<div class="a" style="right:40px;top:300px;width:390px;height:790px;transform:rotate(7deg);border-radius:54px;background:#0b1424;padding:16px;box-shadow:0 40px 70px rgba(1,15,33,.35)">
+    phone = f"""<div class="a" style="right:40px;top:300px;width:390px;height:790px;transform:rotate(7deg);border-radius:54px;background:#0b1424;padding:16px;box-shadow:0 40px 70px rgba(1,15,33,.35){',0 0 0 2px rgba(255,255,255,.22)' if dark else ''}">
   <div style="width:100%;height:100%;border-radius:40px;overflow:hidden;background:#fff;color:#022452">
    <div style="padding:46px 20px 12px;display:flex;align-items:center;gap:12px"><div style="width:64px;height:64px;border-radius:50%;background:#022452;display:flex;align-items:center;justify-content:center">{re.sub(r'<\?xml[^>]*>', '', open(f'{D}/logo-on-navy.svg').read()).replace('<svg', '<svg style="width:46px;height:auto;display:block;overflow:hidden" ', 1)}</div>
     <div style="font-weight:900;font-size:17px">thedanagstudio<div style="font-weight:500;font-size:13px;color:#6b7488;margin-top:3px">Graphic Designer &#183; Accra</div></div></div>
