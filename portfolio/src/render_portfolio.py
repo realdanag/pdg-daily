@@ -78,8 +78,8 @@ SL = [
            + hero('my-083', 'tf-gmg-red', 'ss-178'),
  lambda d: text('PRODUCT VISUALS · MAISON YUSIF FRAGRANCE', 'Luxury perfume,', 'made cinematic', 'Campaign visuals that make every bottle feel like a story.')
            + hero('my-066', 'my-074', 'my-063b'),
- lambda d: text('CAMPAIGNS · MAISON YUSIF FRAGRANCE', 'Stores, shows', 'and exhibitions', 'Posters and flyers for Paris Perfume Week, a US fragrance exhibition and a new store opening.')
-           + hero('my-paris', 'my-dallas', 'my-tamale'),
+ lambda d: text('CAMPAIGNS · MAISON YUSIF FRAGRANCE', 'Launches, sales', 'and exhibitions', 'Posters and flyers for a New Jersey product launch, a US fragrance exhibition and a Christmas sale.')
+           + hero('my-beast-nj', 'my-dallas', 'my-xmas'),
  lambda d: text('PRODUCT VISUALS · SCENT &amp; SPICE BY GB', 'Every scent,', 'its own mood', 'Editorial portraits and still life for a growing Kumasi perfume brand.')
            + hero('ss-030', 'ss-086', 'ss-080'),
  lambda d: text('FASHION CAMPAIGN · TREADFIX', 'Ghanaian craft,', 'on location', 'Lookbook and campaign visuals, on location at Ghanaian landmarks and in the studio.')
@@ -91,18 +91,19 @@ SL = [
  lambda d: text('PACKAGING &amp; LABELS', 'Shelf-ready', 'from day one', 'Labels and product packaging that look premium and sell on sight.')
            + '<div class="grid" style="display:flex;align-items:center;justify-content:center;gap:18px">' + card('pk-jeksal', 'position:relative;width:468px;height:585px') + '<div style="display:flex;flex-direction:column;gap:18px">' + card('pk-marmar-shampoo', 'position:relative;width:426px;height:283.5px') + card('pk-mamti', 'position:relative;width:426px;height:283.5px') + '</div></div>',
  lambda d: text('LOGOS &amp; BRAND LAUNCHES', 'Marks made', 'to be remembered', 'Logos and brand marks for new and growing businesses.')
-           + rows([[('lg-bea', 2000/1327), ('lg-gc', 1)], [('lg-autoperf', 1.5), ('lg-marmar', 2000/1566)]]),
+           + rows([[('lg-bea', 2000/1327), ('lg-gc', 1)], [('lg-danag', 912/395)]]),
  lambda d: text('WEBSITE DESIGN', 'Websites that', 'mean business', 'Custom sites for Scent &amp; Spice by GB and CareerCaptains International, built for desktop and mobile.')
            + '<div class="grid" style="display:flex;flex-direction:column;gap:22px">' + device('web-ss-desktop', 'web-ss-mobile', 'scentxspice.com', False) + device('web-cc-desktop', 'web-cc-mobile', 'careercaptains.org', True) + '</div>',
  cta,
 ]
 T = len(SL)
+NOHEAD = {9}  # slide 9 shows the DANAG STUDIO logo as work, so the header logo is dropped (logo once per slide)
 with sync_playwright() as pw:
     b = pw.chromium.launch(executable_path='/usr/bin/google-chrome'); pg = b.new_page(viewport={'width': 1080, 'height': 1350}, device_scale_factor=2)
     for i, fn in enumerate(SL, 1):
         d = (i % 2 == 0)
         html = f'''<!DOCTYPE html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="s {"n" if d else "w"}">{mark(d)}
-<div class="hd">{lg(d,40)}<span class="pg">PORTFOLIO · {i:02d}/{T:02d}</span></div><div class="col">{fn(d)}</div>
+<div class="hd">{"<span></span>" if i in NOHEAD else lg(d,40)}<span class="pg">PORTFOLIO · {i:02d}/{T:02d}</span></div><div class="col">{fn(d)}</div>
 <div class="ft"><span>@thedanagstudio</span><span>{"Save for later" if i == T else "Swipe &rarr;"}</span></div></div><script>{JS}</script></body></html>'''
         p = S / f'_{i:02d}.html'; p.write_text(html); pg.goto(p.as_uri()); pg.wait_for_timeout(900)
         pg.screenshot(path=str(P / f'{i:02d}.png'))
