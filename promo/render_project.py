@@ -29,12 +29,20 @@ l2 = rb.line('PROJECT', cap, '#fff' if DARK else '#022452', True, dot_color=GOLD
 tiles = ''.join(f'<div style="background:url({pathlib.Path(f"{A}/{w}.jpg").as_uri()}) center top/cover"></div>' for w in WORK)
 svc = ''.join(f'<div style="display:flex;align-items:center;gap:14px"><span style="width:10px;height:10px;border-radius:50%;background:{GOLD};flex:none"></span>{s}</div>'
               for s in ['Flyer &amp; Poster Design', 'Social Media Design', 'Product Visuals', 'Website Design'])
+WORKB = sorted(f'{B}/work/{f}' for f in os.listdir(f'{B}/work'))
+feed = ''.join(f'<div style="background:url({pathlib.Path(w).as_uri()}) center/cover"></div>' for w in WORKB[:12])
+navlogo = re.sub(r'<\?xml[^>]*>', '', open(f'{B}/logo-on-navy.svg').read()).replace('<svg', '<svg style="width:46px;height:auto;display:block;overflow:hidden" ', 1)
 if portrait:
     person = f'<img src="{pathlib.Path(portrait).as_uri()}" style="position:absolute;left:470px;top:380px;height:1150px;-webkit-mask-image:linear-gradient(90deg,transparent 0,transparent 190px,#000 250px);filter:drop-shadow(0 20px 40px rgba(1,15,33,.35))">'
 else:
-    person = ('<div style="position:absolute;right:30px;bottom:0;width:400px;height:640px;border-radius:200px 215px 0 0;'
-              'background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.06));border:2px dashed rgba(255,255,255,.45);'
-              'display:flex;align-items:center;justify-content:center;text-align:center;color:rgba(255,255,255,.75);font-weight:700;font-size:24px;letter-spacing:4px">YOUR<br>PORTRAIT<br>HERE</div>')
+    person = f"""<div style="position:absolute;right:46px;top:470px;width:360px;height:740px;transform:rotate(7deg);border-radius:54px;background:#0b1424;padding:16px;box-shadow:0 40px 70px rgba(1,15,33,.45){',0 0 0 2px rgba(255,255,255,.22)' if DARK else ''}">
+  <div style="width:100%;height:100%;border-radius:40px;overflow:hidden;background:#fff;color:#022452">
+   <div style="padding:46px 20px 12px;display:flex;align-items:center;gap:12px"><div style="width:64px;height:64px;border-radius:50%;background:#022452;display:flex;align-items:center;justify-content:center">{navlogo}</div>
+    <div style="font-weight:900;font-size:17px">thedanagstudio<div style="font-weight:500;font-size:13px;color:#6b7488;margin-top:3px">Graphic Designer &#183; Accra</div></div></div>
+   <div style="display:flex;gap:8px;padding:0 20px 12px"><div style="flex:1;background:#022452;color:#fff;border-radius:8px;text-align:center;font-weight:700;font-size:13px;padding:8px">Follow</div><div style="flex:1;background:#eef1f6;border-radius:8px;text-align:center;font-weight:700;font-size:13px;padding:8px">Message</div></div>
+   <div style="display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:142px;gap:2px">{feed}</div>
+  </div>
+ </div>"""
 
 BG = 'linear-gradient(135deg,#032F65 0%,#022452 45%,#011631 80%,#010F21 100%)' if DARK else 'linear-gradient(180deg,#ffffff 0%,#eef1f6 100%)'
 OV = 'linear-gradient(180deg,#022a5c 0%,rgba(2,36,82,.55) 22%,rgba(2,36,82,.62) 55%,#022452 100%)' if DARK else 'linear-gradient(180deg,#ffffff 0%,rgba(255,255,255,.45) 22%,rgba(244,246,250,.55) 55%,#f1f3f8 100%)'
