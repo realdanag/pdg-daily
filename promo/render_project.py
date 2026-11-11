@@ -22,13 +22,15 @@ INK = '#fff' if DARK else '#022452'
 ic = lambda k, c=None, s=26: (lambda c:  f'<svg viewBox="0 0 24 24" width="{s}" height="{s}" style="color:{c};flex:none">{IC[k]}</svg>')(c or INK)
 
 cap = rb.fit('PROJECT', 500, 190, True)
-l1 = rb.line('DESIGN', cap, '#fff' if DARK else '#022452')
+wp = rb.width('PROJECT', cap)
+cap1 = rb.fit('DESIGN', wp, 400)
+l1 = rb.line('DESIGN', cap1, '#fff' if DARK else '#022452')
 l2 = rb.line('PROJECT', cap, '#fff' if DARK else '#022452', True, dot_color=GOLD)
 tiles = ''.join(f'<div style="background:url({pathlib.Path(f"{A}/{w}.jpg").as_uri()}) center top/cover"></div>' for w in WORK)
 svc = ''.join(f'<div style="display:flex;align-items:center;gap:14px"><span style="width:10px;height:10px;border-radius:50%;background:{GOLD};flex:none"></span>{s}</div>'
               for s in ['Flyer &amp; Poster Design', 'Social Media Design', 'Product Visuals', 'Website Design'])
 if portrait:
-    person = f'<img src="{pathlib.Path(portrait).as_uri()}" style="position:absolute;right:-230px;bottom:0;height:880px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 90px);filter:drop-shadow(0 20px 40px rgba(1,15,33,.35))">'
+    person = f'<img src="{pathlib.Path(portrait).as_uri()}" style="position:absolute;left:470px;top:380px;height:1150px;-webkit-mask-image:linear-gradient(90deg,transparent 0,transparent 190px,#000 250px);filter:drop-shadow(0 20px 40px rgba(1,15,33,.35))">'
 else:
     person = ('<div style="position:absolute;right:30px;bottom:0;width:400px;height:640px;border-radius:200px 215px 0 0;'
               'background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.06));border:2px dashed rgba(255,255,255,.45);'
@@ -51,7 +53,7 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M
 <div class="a" style="left:0;top:170px;width:1080px;height:600px;background:#032F65;mix-blend-mode:color;opacity:{".75" if DARK else ".35"}"></div>
 <div class="a" style="left:610px;top:440px;width:660px;height:660px;border-radius:50%;background:linear-gradient(160deg,#FFD54F,#FFC107 55%,#E3A600)"></div>
 {person}
-<div class="a" style="left:72px;top:455px;width:600px">
+<div class="a" style="left:72px;top:{455 - (cap1 - cap)//2}px;width:600px">
  <div style="display:flex;align-items:center;justify-content:space-between">
   <div style="font-weight:700;font-size:25px;letter-spacing:5px;color:{GOLD if DARK else '#b38600'}">LET'S HANDLE YOUR NEXT</div>
  </div>
