@@ -125,7 +125,7 @@ def layout_C(ey, l1, l2, theme):
     badge = f"""<div class="a" style="right:350px;top:250px;width:210px;height:210px;z-index:5">
   <div style="position:absolute;inset:0;border-radius:50%;background:{GOLD};box-shadow:0 0 0 14px rgba(255,193,7,.22),0 0 0 30px rgba(255,193,7,.10)"></div>
   <svg viewBox="0 0 210 210" style="position:absolute;inset:0"><defs><path id="rc" d="M105 105m-78 0a78 78 0 1 1 156 0a78 78 0 1 1-156 0"/></defs>
-  <text font-family="M" font-weight="700" font-size="14.5" letter-spacing="2.4" fill="#022452"><textPath href="#rc">{ring}{ring}</textPath></text></svg>
+  <text font-family="M" font-weight="700" font-size="15.5" fill="#022452"><textPath href="#rc" textLength="486" lengthAdjust="spacing">{ring}</textPath></text></svg>
   <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:900;font-size:30px;line-height:1;color:#022452">BOOK<br>NOW</div>
  </div>"""
     phone = f"""<div class="a" style="right:96px;top:316px;width:380px;height:770px;transform:rotate(7deg);border-radius:54px;background:#0b1424;padding:16px;box-shadow:0 40px 70px rgba(1,15,33,.35){',0 0 0 2px rgba(255,255,255,.22)' if dark else ''}">
