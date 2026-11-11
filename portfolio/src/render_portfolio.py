@@ -76,7 +76,9 @@ def cta(d):
 <div class="p1" style="font-size:34px;margin-top:30px">Flyers, product visuals, social media, packaging and websites.</div></div>
 <div><div style="display:flex;align-items:center;justify-content:space-between;background:{"#FFC107" if d else "#022452"};border-radius:70px;padding:30px 34px 30px 50px;color:{"#022452" if d else "#fff"}">
 <span style="font-weight:900;font-size:34px">Book DANAG STUDIO</span><span style="font-weight:700;font-size:32px">+233 (0)50 332 0548</span></div>
-<div style="margin-top:40px;display:flex;align-items:center;gap:12px;font-weight:600;font-size:30px">{ic("IG")}{ic("X")}<span style="margin-left:12px">@thedanagstudio</span></div></div></div>'''
+<div style="margin-top:36px;display:flex;gap:56px;font-weight:600;font-size:30px">
+<div style="display:flex;align-items:center;gap:12px">{ic("IG")}{ic("X")}<span style="margin-left:12px">@thedanagstudio</span></div>
+<div style="display:flex;align-items:center;gap:12px">{ic("TT")}{ic("SC")}<span style="margin-left:12px">@realdanag</span></div></div></div></div>'''
 SL = [
  lambda d: text('SELECTED WORK · 2025–2026', 'Work that', 'wears the crown', 'A few favourite projects from DANAG STUDIO, from luxury fragrance and fashion to flyers, packaging and websites.')
            + hero('my-083', 'tf-gmg-red', 'ss-178'),
