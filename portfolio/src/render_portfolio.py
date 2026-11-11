@@ -72,24 +72,24 @@ def cta(d):
 <div style="margin-top:40px;display:flex;align-items:center;gap:12px;font-weight:600;font-size:30px">{ic("IG")}{ic("X")}<span style="margin-left:12px">@thedanagstudio</span></div></div></div>'''
 SL = [
  lambda d: text('SELECTED WORK · 2025–2026', 'Work that', 'wears the crown', 'A few favourite projects from DANAG STUDIO, from luxury fragrance and fashion to flyers, packaging and websites.')
-           + trio('my-horse', 'tf-castle', 'my-apex', pc='50% 42%'),
+           + trio('my-horse', 'tf-castle', 'my-leather', pc='50% 55%'),
  lambda d: text('PRODUCT VISUALS · MAISON YUSIF FRAGRANCE', 'Luxury perfume,', 'made cinematic', 'Campaign visuals that make every bottle feel like a story.')
-           + trio('my-blackex', 'my-wood', 'my-sand', pa='50% 60%'),
- lambda d: text('CAMPAIGNS · MAISON YUSIF FRAGRANCE', 'Milestones, launches', 'and exhibitions', 'Posters and flyers for a 100K-follower milestone, a signature scent and a US fragrance exhibition.')
-           + '<div class="grid" style="display:flex;align-items:center;justify-content:center;gap:18px">' + card('my-100k', 'position:relative;width:601px;height:751px')
-           + '<div style="display:flex;flex-direction:column;gap:18px">' + card('my-dallas', 'position:relative;width:293px;height:366px') + card('my-exclyusif', 'position:relative;width:293px;height:367px', '50% 50%') + '</div></div>',
+           + trio('my-specials-img', 'my-badinfluence', 'my-vatican', pa='50% 60%'),
+ lambda d: text('CAMPAIGNS · MAISON YUSIF FRAGRANCE', 'Stores, shows', 'and exhibitions', 'Posters and flyers for Paris Perfume Week, a US fragrance exhibition and a new store opening.')
+           + '<div class="grid" style="display:flex;align-items:center;justify-content:center;gap:18px">' + card('my-paris', 'position:relative;width:592px;height:751px')
+           + '<div style="display:flex;flex-direction:column;gap:18px">' + card('my-dallas', 'position:relative;width:293px;height:366px') + card('my-tamale', 'position:relative;width:293px;height:367px', '50% 50%') + '</div></div>',
  lambda d: text('PRODUCT VISUALS · SCENT &amp; SPICE BY GB', 'Every scent,', 'its own mood', 'Editorial portraits and still life for a growing Kumasi perfume brand.')
            + quad([('ss-086', '50% 30%'), ('ss-076', '50% 55%'), ('ss-084', '50% 50%'), ('ss-080', '50% 45%')]),
- lambda d: text('FASHION CAMPAIGN · TREADFIX', 'Ghanaian craft,', 'on location', 'Lookbook and campaign visuals shot across iconic Ghanaian landmarks.')
-           + trio('tf-left', 'tf-arch', 'tf-wig', pc='50% 30%'),
+ lambda d: text('FASHION CAMPAIGN · TREADFIX', 'Ghanaian craft,', 'on location', 'Lookbook and campaign visuals, on location at Ghanaian landmarks and in the studio.')
+           + trio('tf-left', 'tf-gmg-red', 'tf-wig-navy', pb='50% 18%', pc='50% 12%'),
  lambda d: text('WATCH VISUALS · CONCEPT WORK', 'Time,', 'beautifully told', 'Personal projects exploring premium watch photography and storytelling.')
            + trio('wk-011', 'cmw-13', 'wk-015', pa='50% 40%', pb='50% 40%', pc='50% 50%'),
- lambda d: text('FLYERS &amp; SOCIAL MEDIA', 'Designs that', 'get the call', 'Promo flyers and social posts for retailers, events and churches.')
-           + fit([('fl-jehovah', 1), ('fl-signature', .8), ('fl-wealth', .88), ('fl-wss', 1)]),
+ lambda d: text('FLYERS &amp; SOCIAL MEDIA', 'Designs that', 'get the call', 'Promo flyers and social posts for perfume brands, events and churches.')
+           + fit([('fl-persian', 1856/2304), ('fl-signature1', .8), ('fl-wealth', .88), ('fl-wss', 1)]),
  lambda d: text('PACKAGING &amp; LABELS', 'Shelf-ready', 'from day one', 'Labels and product packaging that look premium and sell on sight.')
-           + rows([[('pk-tombrown', 3070/707)], [('pk-jeksal', .8), ('pk-tombrown2', 1950/1350)]]),
- lambda d: text('LOGOS &amp; BRAND LAUNCHES', 'Marks made', 'to be remembered', 'Logos, mockups and launch carousels for new and growing brands.')
-           + rows([[('lg-bea', 2000/1327), ('lg-gc', 1)], [('lg-ayara1', .8), ('lg-ayara2', .8)]]),
+           + '<div class="grid" style="display:flex;align-items:center;justify-content:center;gap:18px">' + card('pk-jeksal', 'position:relative;width:468px;height:585px') + '<div style="display:flex;flex-direction:column;gap:18px">' + card('pk-marmar-shampoo', 'position:relative;width:426px;height:283.5px') + card('pk-mamti', 'position:relative;width:426px;height:283.5px') + '</div></div>',
+ lambda d: text('LOGOS &amp; BRAND LAUNCHES', 'Marks made', 'to be remembered', 'Logos and brand marks for new and growing businesses.')
+           + rows([[('lg-bea', 2000/1327), ('lg-gc', 1)], [('lg-autoperf', 1.5), ('lg-marmar', 2000/1566)]]),
  lambda d: text('WEBSITE DESIGN', 'Websites that', 'mean business', 'Custom sites for Scent &amp; Spice by GB and CareerCaptains International, built for desktop and mobile.')
            + '<div class="grid" style="display:flex;flex-direction:column;gap:22px">' + device('web-ss-desktop', 'web-ss-mobile', 'scentxspice.com', False) + device('web-cc-desktop', 'web-cc-mobile', 'careercaptains.org', True) + '</div>',
  cta,
