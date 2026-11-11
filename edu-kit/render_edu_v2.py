@@ -35,7 +35,10 @@ CSS = f'''@font-face{{font-family:M;font-weight:500;src:url({(F/"montserrat-lati
 .num{{font-weight:700;font-size:30px;opacity:.6}}
 .h1{{font-weight:900;font-size:78px;line-height:1.02;letter-spacing:-2.5px}}
 .w .h1 .l2{{color:#7d879a}} .n .h1 .l2{{color:#9fb0cc}}
-.dot{{display:inline-block;width:.2em;height:.2em;border-radius:50%;background:#FFC107;margin-left:.04em}}
+.dot{{display:inline-block;width:.236em;height:.236em;border-radius:50%;background:#FFC107;margin-left:.03em}}
+.gl{{position:absolute;border-radius:50%;filter:blur(30px);pointer-events:none}}
+.gr{{position:absolute;inset:0;pointer-events:none;z-index:50;background-image:url({(F.parent/'grain.png').as_uri()});background-size:256px}}
+.n .gr{{opacity:.16;mix-blend-mode:overlay}} .w .gr{{opacity:.12;mix-blend-mode:multiply}}
 .p1{{font-weight:500;font-size:29px;line-height:1.4}} .w .p1{{color:#6b7488}} .n .p1{{color:rgba(255,255,255,.7)}}
 .p2{{font-weight:600;font-size:29px;line-height:1.4}}
 .card{{width:430px;height:538px;border-radius:26px;overflow:hidden;position:relative;box-shadow:0 18px 40px rgba(1,15,33,.18)}}
@@ -81,7 +84,7 @@ with sync_playwright() as pw:
     b = pw.chromium.launch(executable_path='/usr/bin/google-chrome'); pg = b.new_page(viewport={'width': 1080, 'height': 1350}, device_scale_factor=2)
     for i, fn in enumerate(slides, 1):
         d = (i % 2 == 0)
-        html = f'<!DOCTYPE html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="s {"n" if d else "w"}">{mark(d)}{head(d,i,T)}{fn(d,i,T)}{foot(d, i==T)}</div></body></html>'
+        html = f'<!DOCTYPE html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="s {"n" if d else "w"}">{mark(d)}<div class="gl" style="width:820px;height:820px;right:-380px;top:-300px;background:radial-gradient(circle,rgba(255,193,7,{.34 if d else .26}) 0%,rgba(255,193,7,.08) 40%,transparent 66%)"></div><div class="gl" style="width:600px;height:600px;left:-320px;bottom:-200px;background:radial-gradient(circle,rgba(255,193,7,{.2 if d else .16}) 0%,transparent 62%)"></div><div class="gr"></div>{head(d,i,T)}{fn(d,i,T)}{foot(d, i==T)}</div></body></html>'
         p = out / f'{i:02d}.html'; p.write_text(html); pg.goto(p.as_uri()); pg.wait_for_timeout(700)
         pg.screenshot(path=str(out / f'{i:02d}.png'))
         im = Image.open(out / f'{i:02d}.png').convert('RGB'); im.save(out / f'{i:02d}.jpg', quality=95, subsampling=0)
