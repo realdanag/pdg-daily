@@ -43,6 +43,10 @@ def trio(a, b, c, pa='50% 50%', pb='50% 50%', pc='50% 50%'):  # tall left + two 
 def hero(a, b, c):  # one big + two stacked, every image whole at 4:5 (no cropping)
     return ('<div class="grid" style="display:flex;align-items:center;justify-content:center;gap:18px">' + card(a, 'position:relative;width:601px;height:751px')
             + '<div style="display:flex;flex-direction:column;gap:18px">' + card(b, 'position:relative;width:293px;height:366.5px') + card(c, 'position:relative;width:293px;height:366.5px') + '</div></div>')
+def solo2(a, ra, b, rb, c, rc, W=912, g=18):  # big left + two stacked right, all whole at their own aspect ratios
+    w = (W - g - ra * g) / (ra * (1 / rb + 1 / rc) + 1); H = w / rb + w / rc + g; L = ra * H
+    return ('<div class="grid" style="display:flex;align-items:center;justify-content:center;gap:18px">' + card(a, f'position:relative;width:{L:.1f}px;height:{H:.1f}px')
+            + '<div style="display:flex;flex-direction:column;gap:18px">' + card(b, f'position:relative;width:{w:.1f}px;height:{w/rb:.1f}px') + card(c, f'position:relative;width:{w:.1f}px;height:{w/rc:.1f}px') + '</div></div>')
 def quad(items):  # 2x2, cover
     pos = ['left:0;top:0', 'right:0;top:0', 'left:0;bottom:0', 'right:0;bottom:0']
     return '<div class="grid">' + ''.join(card(n, f'{pos[i]};width:447px;height:calc(50% - 9px)', p) for i, (n, p) in enumerate(items)) + '</div>'
@@ -80,14 +84,18 @@ SL = [
            + hero('my-066', 'my-074', 'my-063b'),
  lambda d: text('CAMPAIGNS · MAISON YUSIF FRAGRANCE', 'Launches, sales', 'and exhibitions', 'Posters and flyers for a New Jersey product launch, a US fragrance exhibition and a Christmas sale.')
            + hero('my-beast-nj', 'my-dallas', 'my-xmas'),
+ lambda d: text('EVENTS · MAISON YUSIF FRAGRANCE', 'From Accra', 'to the world', 'Event and store-opening designs for Paris Perfume Week, FragCon in Houston and a new store in Tamale.')
+           + solo2('my-paris', 8167/10299, 'my-tamale', .8, 'my-fragcon', 1),
  lambda d: text('PRODUCT VISUALS · SCENT &amp; SPICE BY GB', 'Every scent,', 'its own mood', 'Editorial portraits and still life for a growing Kumasi perfume brand.')
            + hero('ss-030', 'ss-086', 'ss-080'),
+ lambda d: text('CAMPAIGNS · SCENT &amp; SPICE BY GB', 'Flyers that', 'fill the shelf', 'Store opening, restock and back-to-school promos for a Kumasi perfume brand.')
+           + hero('fl-ss-open', 'ss-restock', 'ss-student'),
  lambda d: text('FASHION CAMPAIGN · TREADFIX', 'Ghanaian craft,', 'on location', 'Lookbook and campaign visuals, on location at Ghanaian landmarks and in the studio.')
            + hero('tf-barrel-front', 'tf-faces-portrait', 'tf-wig-navy'),
  lambda d: text('WATCH VISUALS · CONCEPT WORK', 'Time,', 'beautifully told', 'Personal projects exploring premium watch photography and storytelling.')
            + hero('wk-011', 'cmw-13', 'wk-015'),
- lambda d: text('FLYERS &amp; SOCIAL MEDIA', 'Designs that', 'get the call', 'Promo flyers and social posts for perfume brands, events and churches.')
-           + fit([('fl-ss-open', .8), ('fl-signature1', .8), ('fl-wealth', .88), ('fl-wss', 1)]),
+ lambda d: text('FLYERS &amp; SOCIAL MEDIA', 'Designs that', 'get the call', 'Promo flyers and social posts for retailers, coaches, events and churches.')
+           + fit([('fl-priscilla', 1), ('fl-signature1', .8), ('fl-wealth', .88), ('fl-wss', 1)]),
  lambda d: text('PACKAGING &amp; LABELS', 'Shelf-ready', 'from day one', 'Labels and product packaging that look premium and sell on sight.')
            + '<div class="grid" style="display:flex;align-items:center;justify-content:center;gap:18px">' + card('pk-jeksal', 'position:relative;width:468px;height:585px') + '<div style="display:flex;flex-direction:column;gap:18px">' + card('pk-marmar-shampoo', 'position:relative;width:426px;height:283.5px') + card('pk-mamti', 'position:relative;width:426px;height:283.5px') + '</div></div>',
  lambda d: text('LOGOS &amp; BRAND LAUNCHES', 'Marks made', 'to be remembered', 'Logos and brand marks for new and growing businesses.')
@@ -97,7 +105,7 @@ SL = [
  cta,
 ]
 T = len(SL)
-NOHEAD = {9}  # slide 9 shows the DANAG STUDIO logo as work, so the header logo is dropped (logo once per slide)
+NOHEAD = {11}  # slide 9 shows the DANAG STUDIO logo as work, so the header logo is dropped (logo once per slide)
 with sync_playwright() as pw:
     b = pw.chromium.launch(executable_path='/usr/bin/google-chrome'); pg = b.new_page(viewport={'width': 1080, 'height': 1350}, device_scale_factor=2)
     for i, fn in enumerate(SL, 1):
