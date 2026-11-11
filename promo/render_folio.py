@@ -12,7 +12,7 @@ sys.path.insert(0, B)
 import render_book as rb
 from contacts import IC
 OUT = sys.argv[1]; os.makedirs(OUT, exist_ok=True)
-PORTRAIT = '/home/claude/assets/danag-cutout.png'
+PORTRAIT = '/home/claude/assets/danag-portrait.jpg'
 GOLD = '#FFC107'; F = f'{R}/fonts/'
 NAVYG = 'linear-gradient(135deg,#032F65 0%,#022452 45%,#011631 80%,#010F21 100%)'
 TABS = ['COVER', 'ABOUT ME', 'MY WORK', 'CLIENTS', 'CONTACT']
@@ -101,7 +101,7 @@ SL.append(frame(1, True, f"""<div style="display:flex;align-items:center;gap:44p
  <div style="flex:1">{head('Who is', 'DANAG STUDIO?'.replace('?', ''), True, maxw=520, cap=170)}
   <div style="margin-top:34px;font-weight:500;font-size:24px;line-height:1.5;color:rgba(255,255,255,.82)">{paras}</div></div>
  <div style="width:330px;flex:none">
-  <div class="card" style="height:470px;background:url({pathlib.Path(PORTRAIT).as_uri()}) center 0/150% no-repeat,linear-gradient(180deg,#e9edf4,#c9d1de)"></div>
+  <div class="card" style="height:470px;background:url({pathlib.Path(PORTRAIT).as_uri()}) center 18%/cover no-repeat"></div>
   <div style="margin-top:-30px;position:relative;margin-left:30px;margin-right:30px;background:{GOLD};color:#022452;border-radius:16px;padding:16px 0;text-align:center;font-weight:900;font-size:26px">Danag &#183; Founder</div>
  </div></div>"""))
 # 3-6 work
