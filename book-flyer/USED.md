@@ -7,6 +7,7 @@ Every headline must invite people to book Danag / make him their designer. No em
 - 2026-11-09 · white · NEED A DESIGNER? · MAKE ME YOUR · DESIGN PLUG (default book.jpg)
 - 2026-11-10 · navy · READY TO STAND OUT? · BOOK YOUR · DESIGN SLOT
 - 2026-11-11 · white · GOT A BIG LAUNCH? · LET'S MAKE IT · LOOK ROYAL · layout C
+- 2026-11-12 · navy · (pre-made by Danag's request) · LET'S HANDLE YOUR NEXT · DESIGN PROJECT · promo/render_project.py
 
 ## Ideas (use or replace)
 - BUILDING A BRAND? · LET'S MAKE IT · UNFORGETTABLE
