@@ -27,8 +27,8 @@ def html(ey, l1, big, theme):
     soft = 'rgba(255,255,255,.62)' if dark else '#6b7488'
     rule = 'rgba(255,255,255,.22)' if dark else 'rgba(2,36,82,.18)'
     gold = '#FFC107'
-    svc = ''.join(f'<div style="border-left:3px solid {gold};padding-left:20px"><div style="font-weight:500;font-size:24px;color:{soft}">{a}</div>'
-                  f'<div style="font-weight:900;font-size:34px;margin-top:2px">{b}</div></div>' for a, b in SERVICES)
+    svc = ''.join(f'<div style="border-left:3px solid {gold};padding-left:20px"><div style="font-weight:900;font-size:30px;line-height:1.15">{a}</div>'
+                  f'<div style="font-weight:500;font-size:24px;margin-top:4px;color:{soft}">{b}</div></div>' for a, b in SERVICES)
     h = 18  # handle size
     handles = ''.join(f'<div class="a" style="{p};width:{h}px;height:{h}px;background:{gold};margin:-{h//2}px"></div>'
                       for p in ('left:0;top:0', 'right:0;top:0;margin-right:-9px', 'left:0;bottom:0;margin-bottom:-9px', 'right:0;bottom:0;margin-right:-9px;margin-bottom:-9px'))
@@ -45,7 +45,7 @@ def html(ey, l1, big, theme):
 body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M;background:{bg};color:{ink}}}
 .a{{position:absolute}}
 </style></head><body>
-<div class="a" style="width:640px;height:640px;left:-330px;top:-300px;border-radius:50%;filter:blur(30px);background:radial-gradient(circle,rgba(255,193,7,{'.22' if dark else '.26'}) 0%,transparent 62%)"></div>
+{'' if dark else '<div class="a" style="width:640px;height:640px;left:-330px;top:-300px;border-radius:50%;filter:blur(30px);background:radial-gradient(circle,rgba(255,193,7,.26) 0%,transparent 62%)"></div>'}
 <svg class="a" viewBox="252 255 749 664" style="right:-260px;top:520px;width:760px;opacity:{'.05' if dark else '.045'}"><path fill="{ink}" fill-rule="evenodd" d="{rb.MK['nodot']}"/><path fill="{ink}" d="{rb.MK['dot']}"/></svg>
 <div class="a" style="left:72px;top:64px">{logo}</div>
 <div class="a" style="right:72px;top:72px;font-weight:700;font-size:21px">{contacts('#022452' if dark else '#fff', gold if dark else '#022452', ink, 34, phone=False)}</div>

@@ -49,6 +49,7 @@ CSS = f'''@font-face{{font-family:M;font-weight:500;src:url({(F/"montserrat-lati
 def mark(dark): return f'<svg class="a" viewBox="252 255 749 664" style="right:-230px;bottom:-80px;width:780px;opacity:{.05 if dark else .045}"><path fill="{"#fff" if dark else "#022452"}" fill-rule="evenodd" d="{MK["nodot"]}"/><path fill="{"#fff" if dark else "#022452"}" d="{MK["dot"]}"/></svg>'
 def head(dark, i, T): return f'<div class="hd">{lg(dark,40)}<span class="pg">{spec["kicker"]} · {i:02d}/{T:02d}</span></div>'
 def foot(dark, last=False): return f'<div class="ft"><span>@thedanagstudio</span><span>{"Save for later" if last else "Swipe &rarr;"}</span></div>'
+GLOW = '<div class="gl" style="width:820px;height:820px;right:-380px;top:-300px;background:radial-gradient(circle,rgba(255,193,7,.26) 0%,rgba(255,193,7,.08) 40%,transparent 66%)"></div><div class="gl" style="width:600px;height:600px;left:-320px;bottom:-200px;background:radial-gradient(circle,rgba(255,193,7,.16) 0%,transparent 62%)"></div>'
 slides = []
 COL = 'position:absolute;left:84px;right:84px;top:118px;bottom:100px;display:flex;flex-direction:column;justify-content:space-evenly'
 c = spec['cover']
@@ -84,7 +85,7 @@ with sync_playwright() as pw:
     b = pw.chromium.launch(executable_path='/usr/bin/google-chrome'); pg = b.new_page(viewport={'width': 1080, 'height': 1350}, device_scale_factor=2)
     for i, fn in enumerate(slides, 1):
         d = (i % 2 == 0)
-        html = f'<!DOCTYPE html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="s {"n" if d else "w"}">{mark(d)}<div class="gl" style="width:820px;height:820px;right:-380px;top:-300px;background:radial-gradient(circle,rgba(255,193,7,{.34 if d else .26}) 0%,rgba(255,193,7,.08) 40%,transparent 66%)"></div><div class="gl" style="width:600px;height:600px;left:-320px;bottom:-200px;background:radial-gradient(circle,rgba(255,193,7,{.2 if d else .16}) 0%,transparent 62%)"></div><div class="gr"></div>{head(d,i,T)}{fn(d,i,T)}{foot(d, i==T)}</div></body></html>'
+        html = f'<!DOCTYPE html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="s {"n" if d else "w"}">{mark(d)}{"" if d else GLOW}<div class="gr"></div>{head(d,i,T)}{fn(d,i,T)}{foot(d, i==T)}</div></body></html>'
         p = out / f'{i:02d}.html'; p.write_text(html); pg.goto(p.as_uri()); pg.wait_for_timeout(700)
         pg.screenshot(path=str(out / f'{i:02d}.png'))
         im = Image.open(out / f'{i:02d}.png').convert('RGB'); im.save(out / f'{i:02d}.jpg', quality=95, subsampling=0)

@@ -74,7 +74,7 @@ def html(eyebrow, l1svg, l2svg, theme='white'):
     svc = (col('GRAPHIC DESIGN', ['Flyer &amp; Poster Design', 'Business Card Design', 'Brochure Design', 'Product Visuals'])
            + col('DIGITAL', ['Social Media Management', 'Website Design', 'Website Redesign', 'And more']))
     th = ''
-    g1, g2, go, gb = ('.38', '.22', '.16', 'overlay') if dark else ('.32', '.20', '.12', 'multiply')
+    g1, g2, go, gb = ('0', '0', '.16', 'overlay') if dark else ('.32', '.20', '.12', 'multiply')
     if dark:
         bg = '#022452' if theme == 'plain' else 'linear-gradient(135deg,#032F65 0%,#022452 45%,#011631 80%,#010F21 100%)'
         th = ("body{background:" + bg + "!important;color:#fff!important}.it{border-bottom-color:rgba(255,255,255,.14)!important}"
