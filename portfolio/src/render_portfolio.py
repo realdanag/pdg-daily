@@ -40,6 +40,9 @@ def text(k, l1, l2, p): return f'<div class="kick">{k}</div><div class="h1">{l1}
 def trio(a, b, c, pa='50% 50%', pb='50% 50%', pc='50% 50%'):  # tall left + two stacked right (v1 layout)
     return f'''<div class="grid" data-l="trio">{card(a,"left:0;top:0;width:497px;height:100%",pa)}
 {card(b,"left:515px;top:0;width:397px;height:calc(50% - 9px)",pb)}{card(c,"left:515px;bottom:0;width:397px;height:calc(50% - 9px)",pc)}</div>'''
+def hero(a, b, c):  # one big + two stacked, every image whole at 4:5 (no cropping)
+    return ('<div class="grid" style="display:flex;align-items:center;justify-content:center;gap:18px">' + card(a, 'position:relative;width:601px;height:751px')
+            + '<div style="display:flex;flex-direction:column;gap:18px">' + card(b, 'position:relative;width:293px;height:366.5px') + card(c, 'position:relative;width:293px;height:366.5px') + '</div></div>')
 def quad(items):  # 2x2, cover
     pos = ['left:0;top:0', 'right:0;top:0', 'left:0;bottom:0', 'right:0;bottom:0']
     return '<div class="grid">' + ''.join(card(n, f'{pos[i]};width:447px;height:calc(50% - 9px)', p) for i, (n, p) in enumerate(items)) + '</div>'
@@ -72,20 +75,19 @@ def cta(d):
 <div style="margin-top:40px;display:flex;align-items:center;gap:12px;font-weight:600;font-size:30px">{ic("IG")}{ic("X")}<span style="margin-left:12px">@thedanagstudio</span></div></div></div>'''
 SL = [
  lambda d: text('SELECTED WORK · 2025–2026', 'Work that', 'wears the crown', 'A few favourite projects from DANAG STUDIO, from luxury fragrance and fashion to flyers, packaging and websites.')
-           + trio('my-horse', 'tf-castle', 'my-leather', pc='50% 55%'),
+           + hero('my-083', 'tf-gmg-red', 'ss-178'),
  lambda d: text('PRODUCT VISUALS · MAISON YUSIF FRAGRANCE', 'Luxury perfume,', 'made cinematic', 'Campaign visuals that make every bottle feel like a story.')
-           + trio('my-specials-img', 'my-badinfluence', 'my-vatican', pa='50% 60%'),
+           + hero('my-066', 'my-074', 'my-063b'),
  lambda d: text('CAMPAIGNS · MAISON YUSIF FRAGRANCE', 'Stores, shows', 'and exhibitions', 'Posters and flyers for Paris Perfume Week, a US fragrance exhibition and a new store opening.')
-           + '<div class="grid" style="display:flex;align-items:center;justify-content:center;gap:18px">' + card('my-paris', 'position:relative;width:592px;height:751px')
-           + '<div style="display:flex;flex-direction:column;gap:18px">' + card('my-dallas', 'position:relative;width:293px;height:366px') + card('my-tamale', 'position:relative;width:293px;height:367px', '50% 50%') + '</div></div>',
+           + hero('my-paris', 'my-dallas', 'my-tamale'),
  lambda d: text('PRODUCT VISUALS · SCENT &amp; SPICE BY GB', 'Every scent,', 'its own mood', 'Editorial portraits and still life for a growing Kumasi perfume brand.')
-           + quad([('ss-086', '50% 30%'), ('ss-076', '50% 55%'), ('ss-084', '50% 50%'), ('ss-080', '50% 45%')]),
+           + hero('ss-030', 'ss-086', 'ss-080'),
  lambda d: text('FASHION CAMPAIGN · TREADFIX', 'Ghanaian craft,', 'on location', 'Lookbook and campaign visuals, on location at Ghanaian landmarks and in the studio.')
-           + trio('tf-left', 'tf-gmg-red', 'tf-wig-navy', pb='50% 18%', pc='50% 12%'),
+           + hero('tf-barrel-front', 'tf-faces-portrait', 'tf-wig-navy'),
  lambda d: text('WATCH VISUALS · CONCEPT WORK', 'Time,', 'beautifully told', 'Personal projects exploring premium watch photography and storytelling.')
-           + trio('wk-011', 'cmw-13', 'wk-015', pa='50% 40%', pb='50% 40%', pc='50% 50%'),
+           + hero('wk-011', 'cmw-13', 'wk-015'),
  lambda d: text('FLYERS &amp; SOCIAL MEDIA', 'Designs that', 'get the call', 'Promo flyers and social posts for perfume brands, events and churches.')
-           + fit([('fl-persian', 1856/2304), ('fl-signature1', .8), ('fl-wealth', .88), ('fl-wss', 1)]),
+           + fit([('fl-ss-open', .8), ('fl-signature1', .8), ('fl-wealth', .88), ('fl-wss', 1)]),
  lambda d: text('PACKAGING &amp; LABELS', 'Shelf-ready', 'from day one', 'Labels and product packaging that look premium and sell on sight.')
            + '<div class="grid" style="display:flex;align-items:center;justify-content:center;gap:18px">' + card('pk-jeksal', 'position:relative;width:468px;height:585px') + '<div style="display:flex;flex-direction:column;gap:18px">' + card('pk-marmar-shampoo', 'position:relative;width:426px;height:283.5px') + card('pk-mamti', 'position:relative;width:426px;height:283.5px') + '</div></div>',
  lambda d: text('LOGOS &amp; BRAND LAUNCHES', 'Marks made', 'to be remembered', 'Logos and brand marks for new and growing businesses.')
