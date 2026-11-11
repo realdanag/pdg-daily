@@ -42,7 +42,7 @@ def line(text, cap, color, dot=False, track=0.02, dot_color='#fff'):
         defs = f'<defs><linearGradient id="{gid}" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{0 if color != "#022452" else 0}" y2="{-G["cap"]}">{stops}</linearGradient></defs>'
         color = f'url(#{gid})'
     if dot:
-        r = cap * 0.15; gap = cap * 0.07
+        r = cap * 0.084; gap = cap * 0.06
         extra = f'<circle cx="{w + gap + r:.2f}" cy="{cap - r:.2f}" r="{r:.2f}" fill="{dot_color}"/>'
         w += gap + 2 * r
     return (f'<svg class="hs" width="{w:.1f}" height="{cap:.1f}" viewBox="0 0 {w:.1f} {cap:.1f}" style="display:block;overflow:visible">{defs}'
@@ -74,6 +74,7 @@ def html(eyebrow, l1svg, l2svg, theme='white'):
     svc = (col('GRAPHIC DESIGN', ['Flyer &amp; Poster Design', 'Business Card Design', 'Brochure Design', 'Product Visuals'])
            + col('DIGITAL', ['Social Media Management', 'Website Design', 'Website Redesign', 'And more']))
     th = ''
+    g1, g2, go, gb = ('.38', '.22', '.16', 'overlay') if dark else ('.32', '.20', '.12', 'multiply')
     if dark:
         bg = '#022452' if theme == 'plain' else 'linear-gradient(135deg,#032F65 0%,#022452 45%,#011631 80%,#010F21 100%)'
         th = ("body{background:" + bg + "!important;color:#fff!important}.it{border-bottom-color:rgba(255,255,255,.14)!important}"
@@ -95,6 +96,8 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M
 {th}
 #box{{display:inline-block;background:linear-gradient(135deg,#032F65,#022452 45%,#011631);border-radius:22px;padding:40px}}
 </style></head><body>
+<div class="a" style="width:900px;height:900px;right:-380px;top:120px;border-radius:50%;filter:blur(30px);background:radial-gradient(circle,rgba(255,193,7,{g1}) 0%,rgba(255,193,7,.08) 40%,transparent 66%)"></div>
+<div class="a" style="width:620px;height:620px;left:-300px;top:640px;border-radius:50%;filter:blur(30px);background:radial-gradient(circle,rgba(255,193,7,{g2}) 0%,transparent 62%)"></div>
 <svg class="a" viewBox="252 255 749 664" style="right:-300px;top:560px;width:760px;opacity:.045"><path class="mk" fill="#022452" fill-rule="evenodd" d="{MK['nodot']}"/><path class="mk" fill="#022452" d="{MK['dot']}"/></svg>
 <div class="a" style="left:72px;top:64px">{logo}</div>
 <div class="a" style="right:72px;top:72px;font-weight:700;font-size:21px">{contacts('#022452' if dark else '#fff', '#FFC107' if dark else '#022452', '#fff' if dark else '#022452', 34, phone=False)}</div>
@@ -106,6 +109,7 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M
 <div class="a" id="foot" style="left:0;right:0;bottom:0;height:210px;background:linear-gradient(135deg,#032F65 0%,#022452 45%,#011631 80%,#010F21 100%)"></div>
 <div class="a" id="bk" style="left:72px;bottom:66px;height:78px;padding:0 44px;border-radius:40px;background:#FFC107;display:flex;align-items:center;font-weight:900;font-size:28px;letter-spacing:3px">BOOK NOW</div>
 <div class="a" id="ct" style="right:72px;bottom:58px;text-align:right;color:#fff"><div style="font-weight:900;font-size:34px">+233 (0)50 332 0548</div><div style="font-weight:500;font-size:22px;opacity:.85;margin-top:8px">realprincedanag@gmail.com</div></div>
+<div class="a" style="inset:0;z-index:50;pointer-events:none;opacity:{go};mix-blend-mode:{gb};background-size:256px;background-image:url({R}/grain.png)"></div>
 </body></html>"""
 
 
