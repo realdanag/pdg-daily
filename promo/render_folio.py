@@ -125,12 +125,13 @@ SL.append(frame(3, False, f"""<div style="display:flex;align-items:flex-end;gap:
  <div style="display:flex;flex-direction:column;gap:20px">{rv('r1', 340)}{rv('r2', 340)}</div>
  <div style="display:flex;flex-direction:column;gap:20px">{rv('r4', 340)}{rv('r3', 340)}</div></div>"""))
 # clients (navy): kind words
-q = lambda t, n: (f'<div style="background:rgba(255,255,255,.06);border:2px solid rgba(255,193,7,.55);border-radius:26px;padding:40px 44px">'
+q = lambda t, n: (f'<div style="background:rgba(255,255,255,.06);border:2px solid rgba(255,193,7,.55);border-radius:26px;padding:30px 40px">'
                   f'<div style="font-family:Georgia,serif;font-size:110px;line-height:.6;color:{GOLD}">&ldquo;</div>'
-                  f'<div style="font-weight:700;font-size:34px;line-height:1.4;margin-top:6px">{t}</div>'
+                  f'<div style="font-weight:700;font-size:30px;line-height:1.38;margin-top:4px">{t}</div>'
                   f'<div style="margin-top:22px;font-weight:900;font-size:22px;letter-spacing:3px;color:{GOLD}">{n}</div></div>')
 SL.append(frame(3, True, f"""<div style="text-align:left">{head('Kind words', 'FROM CLIENTS', True, maxw=760, cap=170)}</div>
 {q("The work is really beautiful and I love the way you were very patient even with all my stubbornness.", "MS. ADELINE")}
+{q("The logo is beautiful and I love the flyer design that came with it.", "MS. GLORIA")}
 {q("I love it, thank you very much.", "MAMLE")}"""))
 # contact (white)
 svc = ['Flyer &amp; Poster Design', 'Product Visuals', 'Social Media Design', 'Social Media Management', 'Brochure Design', 'Business Card Design', 'Website Design &amp; Redesign']
