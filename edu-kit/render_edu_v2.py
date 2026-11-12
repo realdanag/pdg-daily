@@ -84,7 +84,7 @@ T = len(slides); assert T <= 10
 with sync_playwright() as pw:
     b = pw.chromium.launch(executable_path='/usr/bin/google-chrome'); pg = b.new_page(viewport={'width': 1080, 'height': 1350}, device_scale_factor=2)
     for i, fn in enumerate(slides, 1):
-        d = (i % 2 == 0)
+        d = (i % 2 == 0) != (spec.get('start') == 'navy')
         html = f'<!DOCTYPE html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="s {"n" if d else "w"}">{mark(d)}{"" if d else GLOW}<div class="gr"></div>{head(d,i,T)}{fn(d,i,T)}{foot(d, i==T)}</div></body></html>'
         p = out / f'{i:02d}.html'; p.write_text(html); pg.goto(p.as_uri()); pg.wait_for_timeout(700)
         pg.screenshot(path=str(out / f'{i:02d}.png'))

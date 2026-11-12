@@ -1,0 +1,55 @@
+{
+ "kicker": "DESIGN TIP 03",
+ "start": "navy",
+ "cover": {
+  "l1": "Too many fonts",
+  "l2": "make you look cheap",
+  "text": "Five fonts on one flyer doesn't look creative. It looks confused. Here's how pros keep it clean.",
+  "visual": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;background:#1d1a17;font-family:M;\"><div style=\"position:absolute;left:30px;top:34px;color:#e9b44c;font-weight:700;font-size:15px;letter-spacing:5px\">AUNTIE AKOS KITCHEN</div><div style=\"position:absolute;left:26px;top:72px;color:#fff;font-weight:900;font-size:66px;line-height:.92;letter-spacing:-2px\">JOLLOF<br>FRIDAYS</div><div style=\"position:absolute;left:30px;top:228px;color:#e9b44c;font-weight:900;font-size:44px\">GH&#8373; 45</div><div style=\"position:absolute;left:30px;top:290px;color:#cfc7bd;font-weight:500;font-size:18px;line-height:1.5\">Jollof, chicken and shito<br>Every Friday, 12pm to 8pm</div><div style=\"position:absolute;left:30px;right:30px;bottom:30px;border-top:1px solid #3a342e;padding-top:14px;color:#e9b44c;font-weight:700;font-size:16px\">Osu, Accra &#183; 000 000 0000</div></div>",
+  "visual_back": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;background:#fff4d6;\"><div style=\"position:absolute;left:24px;top:30px;color:#c0392b;font-family:serif;font-style:italic;font-size:26px\">Auntie Akos Kitchen</div><div style=\"position:absolute;left:22px;top:76px;color:#1b5e20;font-family:Impact,fantasy;font-size:58px;line-height:1\">JOLLOF</div><div style=\"position:absolute;left:26px;top:140px;color:#6a1b9a;font-family:SC;font-size:64px;line-height:1\">Fridays!!</div><div style=\"position:absolute;left:26px;top:226px;color:#000;font-family:monospace;font-size:34px\">GHC 45 only</div><div style=\"position:absolute;left:26px;top:290px;color:#333;font-family:cursive;font-size:20px;line-height:1.4\">Jollof, chicken and shito<br>every Friday 12pm-8pm</div><div style=\"position:absolute;left:26px;bottom:30px;color:#0d47a1;font-family:serif;font-weight:700;font-size:18px\">Osu, Accra. Call 000 000 0000</div></div>"
+ },
+ "tips": [
+  {
+   "title1": "Stick to",
+   "title2": "two fonts",
+   "problem": "Every new font adds noise and makes the design feel messy.",
+   "fix": "One font for headlines, one for everything else. That's enough.",
+   "before": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;background:#fff4d6;\"><div style=\"position:absolute;left:24px;top:30px;color:#c0392b;font-family:serif;font-style:italic;font-size:26px\">Auntie Akos Kitchen</div><div style=\"position:absolute;left:22px;top:76px;color:#1b5e20;font-family:Impact,fantasy;font-size:58px;line-height:1\">JOLLOF</div><div style=\"position:absolute;left:26px;top:140px;color:#6a1b9a;font-family:SC;font-size:64px;line-height:1\">Fridays!!</div><div style=\"position:absolute;left:26px;top:226px;color:#000;font-family:monospace;font-size:34px\">GHC 45 only</div><div style=\"position:absolute;left:26px;top:290px;color:#333;font-family:cursive;font-size:20px;line-height:1.4\">Jollof, chicken and shito<br>every Friday 12pm-8pm</div><div style=\"position:absolute;left:26px;bottom:30px;color:#0d47a1;font-family:serif;font-weight:700;font-size:18px\">Osu, Accra. Call 000 000 0000</div></div>",
+   "after": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;background:#1d1a17;font-family:M;\"><div style=\"position:absolute;left:30px;top:34px;color:#e9b44c;font-weight:700;font-size:15px;letter-spacing:5px\">AUNTIE AKOS KITCHEN</div><div style=\"position:absolute;left:26px;top:72px;color:#fff;font-weight:900;font-size:66px;line-height:.92;letter-spacing:-2px\">JOLLOF<br>FRIDAYS</div><div style=\"position:absolute;left:30px;top:228px;color:#e9b44c;font-weight:900;font-size:44px\">GH&#8373; 45</div><div style=\"position:absolute;left:30px;top:290px;color:#cfc7bd;font-weight:500;font-size:18px;line-height:1.5\">Jollof, chicken and shito<br>Every Friday, 12pm to 8pm</div><div style=\"position:absolute;left:30px;right:30px;bottom:30px;border-top:1px solid #3a342e;padding-top:14px;color:#e9b44c;font-weight:700;font-size:16px\">Osu, Accra &#183; 000 000 0000</div></div>",
+   "before_note": "Five fonts fighting<br>for attention.",
+   "after_note": "One family, clean<br>and confident."
+  },
+  {
+   "title1": "Use weight,",
+   "title2": "not new fonts",
+   "problem": "Changing the font to show what's important just adds clutter.",
+   "fix": "Use bold, size and colour from the same font to create emphasis.",
+   "before": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;background:#f2f6f4;\"><div style=\"position:absolute;left:30px;top:40px;color:#2e7d6b;font-family:serif;font-size:30px\">Glow Haven Spa</div><div style=\"position:absolute;left:30px;top:96px;color:#333;font-family:cursive;font-size:24px;line-height:1.35\">Full body massage</div><div style=\"position:absolute;left:30px;top:140px;color:#c62828;font-family:Impact,fantasy;font-size:40px\">20% OFF</div><div style=\"position:absolute;left:30px;top:200px;color:#555;font-family:monospace;font-size:17px;line-height:1.6\">Facials, pedicure,<br>manicure, sauna<br>Airport Residential</div><div style=\"position:absolute;left:30px;bottom:34px;color:#2e7d6b;font-family:serif;font-style:italic;font-size:20px\">Book: 000 000 0000</div></div>",
+   "after": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;background:#f2f6f4;font-family:M;\"><div style=\"position:absolute;left:30px;top:36px;color:#2e7d6b;font-weight:700;font-size:15px;letter-spacing:5px\">GLOW HAVEN SPA</div><div style=\"position:absolute;left:28px;top:70px;color:#173f36;font-weight:900;font-size:50px;line-height:.95;letter-spacing:-1.5px\">Full body<br>massage</div><div style=\"position:absolute;left:30px;top:188px;background:#2e7d6b;color:#fff;font-weight:900;font-size:30px;padding:8px 16px;border-radius:8px\">20% OFF</div><div style=\"position:absolute;left:30px;top:262px;color:#4f6b64;font-weight:500;font-size:18px;line-height:1.55\">Facials &#183; Pedicure &#183; Manicure &#183; Sauna<br>Airport Residential, Accra</div><div style=\"position:absolute;left:30px;bottom:34px;color:#173f36;font-weight:900;font-size:20px\">Book now &#183; 000 000 0000</div></div>",
+   "before_note": "Emphasis by<br>changing fonts.",
+   "after_note": "Emphasis by weight,<br>size and colour."
+  },
+  {
+   "title1": "Pair a bold title",
+   "title2": "with a simple body",
+   "problem": "Two decorative fonts together are hard to read and clash.",
+   "fix": "Pair a strong display font with a plain, readable one for details.",
+   "before": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;background:#0f172a;\"><div style=\"position:absolute;left:28px;top:40px;color:#f97316;font-family:SC;font-size:62px;line-height:1\">Kumasi Kicks</div><div style=\"position:absolute;left:30px;top:130px;color:#fff;font-family:cursive;font-size:22px;line-height:1.5\">New sneaker drop this Saturday at Adum. Limited pairs in sizes 40 to 46. First come first served. Call 000 000 0000</div></div>",
+   "after": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;background:#0f172a;font-family:M;\"><div style=\"position:absolute;left:30px;top:38px;color:#f97316;font-weight:700;font-size:15px;letter-spacing:5px\">KUMASI KICKS</div><div style=\"position:absolute;left:26px;top:70px;color:#fff;font-weight:900;font-size:62px;line-height:.92;letter-spacing:-2px\">NEW<br>DROP</div><div style=\"position:absolute;left:30px;top:206px;color:#f97316;font-weight:900;font-size:26px\">This Saturday &#183; Adum</div><div style=\"position:absolute;left:30px;top:252px;color:#cbd5e1;font-weight:500;font-size:18px;line-height:1.55\">Limited pairs, sizes 40 to 46.<br>First come, first served.</div><div style=\"position:absolute;left:30px;right:30px;bottom:30px;background:#f97316;color:#0f172a;border-radius:10px;padding:12px 16px;font-weight:900;font-size:18px\">Call 000 000 0000</div></div>",
+   "before_note": "Two fancy fonts,<br>hard to read.",
+   "after_note": "Bold title, plain body,<br>easy to scan."
+  },
+  {
+   "title1": "Save script fonts",
+   "title2": "for one or two words",
+   "problem": "Whole sentences in a script font are slow and tiring to read.",
+   "fix": "Use script as an accent on one or two words, never for details.",
+   "before": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;background:#fff7f2;\"><div style=\"position:absolute;left:28px;right:28px;top:50px;color:#8e3b46;font-family:SC;font-size:40px;line-height:1.2\">Ama and Kojo are getting married on Saturday 6th December at Labadi, please come and celebrate with us</div></div>",
+   "after": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;background:#fff7f2;font-family:M;text-align:center\"><div style=\"position:absolute;left:0;right:0;top:46px;color:#8e3b46;font-weight:700;font-size:12px;letter-spacing:4px\">TOGETHER WITH THEIR FAMILIES</div><div style=\"position:absolute;left:0;right:0;top:84px;color:#8e3b46;font-family:SC;font-size:70px;line-height:1\">Ama &amp; Kojo</div><div style=\"position:absolute;left:0;right:0;top:186px;color:#3b2a2d;font-weight:900;font-size:26px;letter-spacing:2px\">ARE GETTING MARRIED</div><div style=\"position:absolute;left:60px;right:60px;top:240px;border-top:1px solid #d9b8bc\"></div><div style=\"position:absolute;left:0;right:0;top:262px;color:#3b2a2d;font-weight:700;font-size:20px;line-height:1.6\">Saturday, 6 December<br>Labadi, Accra</div></div>",
+   "before_note": "A full sentence<br>in script.",
+   "after_note": "Script on the names,<br>clean details."
+  }
+ ],
+ "recap": {"l1": "Clean typography", "l2": "in four rules", "items": ["Two fonts maximum", "Use weight, not new fonts", "Bold title, simple body", "Script for accents only"]},
+ "cta": {"l1": "Want designs", "l2": "that look premium", "text": "Let's design something clean, bold and easy to read."}
+}
