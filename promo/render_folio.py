@@ -116,6 +116,22 @@ web = f"""<div style="display:flex;flex-direction:column;gap:30px;align-items:ce
     for d, m, t in [('web-ss-desktop', 'web-ss-mobile', 'scentxspice.com'), ('web-cc-desktop', 'web-cc-mobile', 'careercaptains.org')]) + '</div>'
 SL.append(frame(2, True, f"""<div style="display:flex;align-items:flex-end;gap:36px"><div><div style="font-weight:900;font-size:22px;letter-spacing:6px;color:{GOLD};margin-bottom:18px">MY WORK · 04</div>{head('Website', 'DESIGN', True, maxw=520, cap=170)}</div>
 <div style="border-left:3px solid {GOLD};padding-left:24px;font-weight:500;font-size:24px;line-height:1.45;max-width:340px;margin-bottom:10px;opacity:.85">Custom websites built for desktop and mobile, new to the studio.</div></div>{web}"""))
+# clients (white): real chat screenshots, names covered
+RV = '/home/claude/assets/reviews'
+rv = lambda n, w: f'<img src="{pathlib.Path(f"{RV}/{n}.jpg").as_uri()}" style="width:{w}px;display:block;border-radius:18px;border:3px solid #022452;box-shadow:0 16px 34px rgba(1,15,33,.2)">'
+SL.append(frame(3, False, f"""<div style="display:flex;align-items:flex-end;gap:36px"><div><div style="font-weight:900;font-size:22px;letter-spacing:6px;color:#b38600;margin-bottom:18px">CLIENTS · IN THEIR WORDS</div>{head("Clients'", 'REVIEWS', False, maxw=470, cap=170)}</div>
+<div style="border-left:3px solid {GOLD};padding-left:24px;font-weight:500;font-size:23px;line-height:1.45;max-width:360px;margin-bottom:10px;color:#4d5870">Real messages from clients after their work was delivered.</div></div>
+<div style="display:flex;gap:22px;justify-content:center;align-items:flex-start">
+ <div style="display:flex;flex-direction:column;gap:20px">{rv('r1', 340)}{rv('r2', 340)}</div>
+ <div style="display:flex;flex-direction:column;gap:20px">{rv('r4', 340)}{rv('r3', 340)}</div></div>"""))
+# clients (navy): kind words
+q = lambda t, n: (f'<div style="background:rgba(255,255,255,.06);border:2px solid rgba(255,193,7,.55);border-radius:26px;padding:40px 44px">'
+                  f'<div style="font-family:Georgia,serif;font-size:110px;line-height:.6;color:{GOLD}">&ldquo;</div>'
+                  f'<div style="font-weight:700;font-size:34px;line-height:1.4;margin-top:6px">{t}</div>'
+                  f'<div style="margin-top:22px;font-weight:900;font-size:22px;letter-spacing:3px;color:{GOLD}">{n}</div></div>')
+SL.append(frame(3, True, f"""<div style="text-align:left">{head('Kind words', 'FROM CLIENTS', True, maxw=760, cap=170)}</div>
+{q("The work is really beautiful and I love the way you were very patient even with all my stubbornness.", "MS. ADELINE")}
+{q("I love it, thank you very much.", "MAMLE")}"""))
 # contact (white)
 svc = ['Flyer &amp; Poster Design', 'Product Visuals', 'Social Media Design', 'Social Media Management', 'Brochure Design', 'Business Card Design', 'Website Design &amp; Redesign']
 svc_html = ''.join(f'<div style="display:flex;align-items:center;gap:14px;padding:9px 0"><svg width="18" height="18" viewBox="0 0 10 10"><path d="M1 1 L9 5 L1 9 Z" fill="{GOLD}"/></svg>{s}</div>' for s in svc)
