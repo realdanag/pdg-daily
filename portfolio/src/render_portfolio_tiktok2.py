@@ -81,7 +81,7 @@ def cta(d):
 <div style="display:flex;align-items:center;gap:12px">{ic("SC")}<span style="margin-left:12px">@realdanag</span></div></div></div></div>'''
 SL = [
  lambda d: text('SELECTED WORK · 2025–2026', 'Crafted to', 'be remembered', 'Perfume campaigns, fashion lookbooks, flyers, packaging, logos and websites by DANAG STUDIO.')
-           + hero('my-apex', 'tf-gmg-red', 'my-specials-img'),
+           + hero('my-blackex', 'tf-gmg-red', 'my-specials-img'),
  lambda d: text('PRODUCT VISUALS · MAISON YUSIF FRAGRANCE', 'Luxury perfume,', 'made cinematic', 'Campaign visuals that make every bottle feel like a story.')
            + hero('my-066', 'my-wood', 'my-vatican'),
  lambda d: text('CAMPAIGNS · MAISON YUSIF FRAGRANCE', 'Launches, sales', 'and exhibitions', 'Posters and flyers for a New Jersey product launch, a US fragrance exhibition and a Christmas sale.')
