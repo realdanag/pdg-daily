@@ -18,11 +18,11 @@ S = [
   ['Your customers', "don't read.", 'They scan'], 'Eyes move fast. Good design works with that, not against it.', 'DESIGN TIP 05'),
  ('T05-2.jpg', 'center', 'left:90px;top:200px;width:820px', 'linear-gradient(160deg,rgba(1,15,33,.85) 0%,rgba(1,15,33,.3) 45%,transparent 60%)',
   ['Eyes start', 'top left'], 'Readers enter at the top left by instinct. Put your most important message there.', ''),
- ('T05-3.jpg', '34px 100%/130% auto no-repeat', 'left:90px;top:200px;width:900px', 'linear-gradient(180deg,rgba(1,15,33,.8) 0%,rgba(1,15,33,.3) 40%,transparent 55%)',
+ ('T05-3.jpg', '0px -250px/125% auto no-repeat', 'left:90px;top:200px;width:900px', 'linear-gradient(180deg,rgba(1,15,33,.8) 0%,rgba(1,15,33,.3) 40%,transparent 55%)',
   ['Big things', 'get seen', 'first'], 'The largest element wins the first glance. Size things on purpose.', ''),
- ('T05-4-alt.jpg', 'center', 'left:90px;bottom:250px;width:600px', 'linear-gradient(20deg,rgba(1,15,33,.9) 0%,rgba(1,15,33,.35) 50%,transparent 68%)',
+ ('T05-4-alt.jpg', '120px -110px/100% auto no-repeat', 'left:90px;bottom:250px;width:600px', 'linear-gradient(20deg,rgba(1,15,33,.9) 0%,rgba(1,15,33,.35) 50%,transparent 68%)',
   ['Contrast', 'leads the', 'eye'], 'Light against dark, bold against thin. Contrast is a map for the eye.', ''),
- ('T05-5.jpg', 'center', 'left:90px;top:200px;width:600px', 'linear-gradient(90deg,rgba(1,15,33,.85) 0%,rgba(1,15,33,.3) 45%,transparent 62%)',
+ ('T05-5.jpg', '300px 50%/auto 100% no-repeat', 'left:90px;top:200px;width:520px;--fs:70px', 'linear-gradient(90deg,rgba(1,15,33,.85) 0%,rgba(1,15,33,.3) 45%,transparent 62%)',
   ['Feeling', 'comes before', 'thinking'], 'People feel your design in a split second. The logic comes later.', ''),
  ('T05-6.jpg', 'center', 'left:90px;top:260px;width:360px;--fs:58px', 'linear-gradient(90deg,rgba(1,15,33,.88) 0%,rgba(1,15,33,.35) 45%,transparent 60%)',
   ['One surprise', 'makes it', 'stick'], "You don't need to change everything. One unexpected detail is enough.", ''),
@@ -41,7 +41,7 @@ for i, (img, pos, box, shade, lines, sub, kick) in enumerate(S):
     x = i * 1080
     head = ''.join(f'<div style="color:{G if j % 2 else "#fff"}">{t}{DOT if j == len(lines) - 1 else ""}</div>' for j, t in enumerate(lines))
     cta = (f'<div style="display:inline-block;margin-top:34px;background:{G};color:#022452;border-radius:40px;padding:16px 30px;font-weight:900;font-size:26px">Book a design: +233 (0)50 332 0548</div>' if i == N - 1 else '')
-    panels += f'''<div class="a" style="left:{x}px;top:0;width:1080px;height:1350px;overflow:hidden">
+    panels += f'''<div class="a" style="left:{x}px;top:0;width:1080px;height:1350px;overflow:hidden;background:#06101f">
  <div class="a" style="inset:0;background:{('url(' + pathlib.Path(f"{A}/{img}").as_uri() + ') ' + (pos if '/' in pos else pos + '/cover')) if img else 'linear-gradient(160deg,#032F65,#011631)'}"></div>
  {RINGS if not img else ''}
  <div class="a" style="inset:0;background:{shade}"></div>

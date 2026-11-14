@@ -15,12 +15,12 @@ CFG = {
    head='Make every<br>move <span class="box">count</span>', sub='Bold, intentional designs that keep your business a step ahead.'),
  'P2': dict(theme='white', pos='left', pic='70% center', size=118,
    head='Be the<br>brand<br><span class="g">that<br>stands</span><br>in the<br>light', sub='Designs that put your business where everyone can see it.'),
- 'P3': dict(theme='navy', pos='top', pic='center 75%',
-   head='Complete<br>your <span class="g">brand</span>', sub='DANAG STUDIO is the missing piece between you and designs that sell.'),
+ 'P3': dict(theme='navy', pos='top', pic='center 170px/100% auto no-repeat', size=88,
+   head='Complete<br>your <span class="g">brand</span>', sub='The missing piece between you and designs that sell.'),
  'P4': dict(theme='white', pos='topc', pic='center 220px/100% auto no-repeat', size=78,
    head='Good <span class="box">design</span> is what<br>separates you from<br>everyone else', sub='Flyers, product visuals and social media that make you instantly recognisable.', btn='Stand out now'),
- 'P5': dict(theme='navy', pos='left', pic='70% center', size=96,
-   head='You\'ve got<br><span class="g">the audience</span>', sub2='But not their <span class="g">attention?</span>', sub='Having followers isn\'t enough. You need designs that make them stop.'),
+ 'P5': dict(theme='navy', pos='top', pic='center 330px/100% auto no-repeat', size=92,
+   head='You\'ve got <span class="g">the audience</span>', sub2='But not their <span class="g">attention?</span>', sub='Having followers isn\'t enough. You need designs that make them stop.'),
  'P6': dict(theme='white', pos='left', pic='40px 110px/100% auto no-repeat', size=128,
    head='We<br><b>Can</b><br><b>Fix</b><br>Your<br>Brand', light=True,
    sub='Let\'s talk business.', top=345),
@@ -33,6 +33,10 @@ if not navy and not photo.endswith('-cut.png'):
     W = sorted(sum(c) / 3 for c in cs)[1]
     lut = [min(255, int(v * 255 / max(W - 8, 150))) for v in range(256)] * 3
     im0.point(lut).save('/tmp/_white.jpg', quality=95); photo = '/tmp/_white.jpg'
+BGC = None
+if 'no-repeat' in CFG['pic'] and navy:
+    from PIL import ImageStat as _S
+    _im = Image.open(photo).convert('RGB'); BGC = '#%02x%02x%02x' % tuple(int(v) for v in _S.Stat(_im.crop((0, 0, _im.size[0], 30))).mean)
 TXT = '#fff' if navy else N; SUBC = '#dfe5f1' if navy else '#3a4d6e'
 logo = re.sub(r'<\?xml[^>]*>', '', open(f'{B}/logo-on-{"navy" if navy else "white"}.svg').read()).replace('<svg', '<svg style="height:56px;width:auto;display:block"', 1)
 ic = lambda k, c, s=18: f'<svg viewBox="0 0 24 24" width="{s}" height="{s}" style="color:{c};flex:none">{IC[k]}</svg>'
@@ -58,7 +62,7 @@ html = f"""<html><head><style>
 @font-face{{font-family:M;font-weight:700;src:url({F}montserrat-latin-700-normal.woff2)}}
 @font-face{{font-family:M;font-weight:900;src:url({F}montserrat-latin-900-normal.woff2)}}
 *{{margin:0;padding:0;box-sizing:border-box}}
-body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M;color:{TXT};background:{"#011631" if navy else "#ffffff"}}}
+body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M;color:{TXT};background:{BGC or ("#011631" if navy else "#ffffff")}}}
 .a{{position:absolute}} .g{{color:{G}}} b{{font-weight:900}}
 .box{{display:inline-block;background:{G};color:{N};padding:0 .14em;border-radius:.08em;line-height:1.02}}
 </style></head><body>
