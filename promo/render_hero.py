@@ -32,7 +32,7 @@ CFG = {
  'P11': dict(theme='navy', pos='left', pic='center', size=70, top=200,
    head='Your vision<span class="g">.</span><br><span class="g">Our design</span>', sub='We listen, then design what your business really needs.', sw=380),
  'P12': dict(theme='navy', pos='top', top=175, pic='center bottom/100% auto no-repeat', size=74,
-   head='Size doesn\'t matter<span class="g">.</span><br><span class="g">Strategy does</span>', sub=''),
+   head='It\'s not the size<span class="g">.</span><br><span class="g">It\'s the strategy</span>', sub=''),
  'P10': dict(theme='navy', pos='top', pic='center 140px/86% auto no-repeat', size=84,
    head='Stronger than<br><span class="g">you think</span>', sub='', mask='-webkit-mask-image:radial-gradient(closest-side,#000 45%,transparent 100%)'),
  'P9': dict(theme='navy', pos='left', pic='330px 170px/72% auto no-repeat', size=78, top=250,
