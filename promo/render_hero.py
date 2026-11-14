@@ -21,7 +21,7 @@ CFG = {
    head='Good <span class="box">design</span> is what<br>separates you from<br>everyone else', sub='Flyers, product visuals and social media that make you instantly recognisable.', btn='Stand out now'),
  'P5': dict(theme='navy', pos='left', pic='70% center', size=96,
    head='You\'ve got<br><span class="g">the audience</span>', sub2='But not their <span class="g">attention?</span>', sub='Having followers isn\'t enough. You need designs that make them stop.'),
- 'P6': dict(theme='white', pos='left', pic='150px 0/100% auto no-repeat', size=128,
+ 'P6': dict(theme='white', pos='left', pic='150px 110px/100% auto no-repeat', size=128,
    head='We<br><b>Can</b><br><b>Fix</b><br>Your<br>Brand', light=True,
    sub='Let\'s talk business.', top=345),
 }[key]
