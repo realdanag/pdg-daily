@@ -17,15 +17,24 @@ CFG = {
    head='Be the<br>brand<br><span class="g">that<br>stands</span><br>in the<br>light', sub='Designs that put your business where everyone can see it.'),
  'P3': dict(theme='navy', pos='top', pic='center 75%',
    head='Complete<br>your <span class="g">brand</span>', sub='DANAG STUDIO is the missing piece between you and designs that sell.'),
- 'P4': dict(theme='white', pos='topc', pic='center 80%', size=78,
+ 'P4': dict(theme='white', pos='topc', pic='center 330px/100% auto no-repeat', size=78,
    head='Good <span class="box">design</span> is what<br>separates you from<br>everyone else', sub='Flyers, product visuals and social media that make you instantly recognisable.', btn='Stand out now'),
  'P5': dict(theme='navy', pos='left', pic='70% center', size=96,
    head='You\'ve got<br><span class="g">the audience</span>', sub2='But not their <span class="g">attention?</span>', sub='Having followers isn\'t enough. You need designs that make them stop.'),
- 'P6': dict(theme='white', pos='left', pic='right center', size=128,
-   head='We<br><b>Can<span class="g" style="display:inline-block;transform:rotate(18deg) translateY(-14px)">\'t</span></b><br><b>Fix</b><br>Your<br>Brand', light=True,
+ 'P6': dict(theme='white', pos='left6', pic='221px -199px/1300px auto no-repeat', size=128,
+   head='We<br><b>Can</b><br><b>Fix</b><br>Your<br>Brand', light=True,
+   extra='<div class="a" style="left:TX;top:TY;font-weight:900;font-size:128px;color:#FFC107;transform:rotate(-12deg);z-index:7">\'t</div>',
    sub='Just kidding. We can. Let\'s talk business.'),
 }[key]
-navy = CFG['theme'] == 'navy'; TXT = '#fff' if navy else N; SUBC = '#dfe5f1' if navy else '#3a4d6e'
+navy = CFG['theme'] == 'navy'
+if not navy and not photo.endswith('-cut.png'):
+    from PIL import ImageStat
+    im0 = Image.open(photo).convert('RGB'); w0, h0 = im0.size
+    cs = [ImageStat.Stat(im0.crop(b)).median for b in [(0, 0, w0 // 8, h0 // 8), (w0 - w0 // 8, 0, w0, h0 // 8), (0, h0 // 2, w0 // 10, h0 // 2 + h0 // 10)]]
+    W = sorted(sum(c) / 3 for c in cs)[1]
+    lut = [min(255, int(v * 255 / max(W - 8, 150))) for v in range(256)] * 3
+    im0.point(lut).save('/tmp/_white.jpg', quality=95); photo = '/tmp/_white.jpg'
+TXT = '#fff' if navy else N; SUBC = '#dfe5f1' if navy else '#3a4d6e'
 logo = re.sub(r'<\?xml[^>]*>', '', open(f'{B}/logo-on-{"navy" if navy else "white"}.svg').read()).replace('<svg', '<svg style="height:56px;width:auto;display:block"', 1)
 ic = lambda k, c, s=18: f'<svg viewBox="0 0 24 24" width="{s}" height="{s}" style="color:{c};flex:none">{IC[k]}</svg>'
 circ = lambda k: f'<span style="width:36px;height:36px;border-radius:50%;background:{G if k=="PH" else ("rgba(255,255,255,.12)" if navy else N)};display:inline-flex;align-items:center;justify-content:center">{ic(k, N if k=="PH" else ("#fff" if navy else "#fff"))}</span>'
@@ -37,6 +46,8 @@ if pos == 'top':
 elif pos == 'topc':
     shade = 'linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.75) 45%,transparent 60%)'
     box = 'left:90px;right:90px;top:220px;text-align:center'
+elif pos == 'left6':
+    shade = 'linear-gradient(90deg,#fff 0px,#fff 380px,rgba(255,255,255,0) 540px)'; box = 'left:90px;width:520px;top:392px'
 else:
     shade = f'linear-gradient(90deg,{"rgba(1,15,33,.94)" if navy else "rgba(255,255,255,.96)"} 0%,{"rgba(1,15,33,.6)" if navy else "rgba(255,255,255,.7)"} 40%,transparent 60%)'
     box = 'left:90px;width:520px;top:250px'
@@ -48,15 +59,16 @@ html = f"""<html><head><style>
 @font-face{{font-family:M;font-weight:700;src:url({F}montserrat-latin-700-normal.woff2)}}
 @font-face{{font-family:M;font-weight:900;src:url({F}montserrat-latin-900-normal.woff2)}}
 *{{margin:0;padding:0;box-sizing:border-box}}
-body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M;color:{TXT};background:{"#011631" if navy else "#f4f5f8"}}}
+body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M;color:{TXT};background:{"#011631" if navy else "#ffffff"}}}
 .a{{position:absolute}} .g{{color:{G}}} b{{font-weight:900}}
 .box{{display:inline-block;background:{G};color:{N};padding:0 .14em;border-radius:.08em;line-height:1.02}}
 </style></head><body>
-<div class="a" style="inset:0;background:url({pathlib.Path(photo).resolve().as_uri()}) {CFG['pic']}/cover"></div>
+<div class="a" style="inset:0;background:url({pathlib.Path(photo).resolve().as_uri()}) {CFG['pic'] if '/' in CFG['pic'] else CFG['pic'] + '/cover'}"></div>
 <div class="a" style="inset:0;background:{shade}"></div>
 <div class="a" style="left:0;right:0;bottom:0;height:300px;background:linear-gradient(180deg,transparent,{"rgba(1,15,33,.95)" if navy else "rgba(255,255,255,.92)"})"></div>
-{"" if navy else '<div class="a" style="inset:0;background:radial-gradient(700px 560px at 0% 0%,rgba(255,193,7,.22),transparent 62%)"></div>'}
+
 <div class="a" style="left:90px;top:84px">{logo}</div>
+{CFG.get('extra','').replace('TX', os.environ.get('TX','640px')).replace('TY', os.environ.get('TY','500px'))}
 <div class="a" style="{box}">
  <div style="font-weight:{head_w};font-size:{size}px;line-height:1.0;letter-spacing:-{size*0.035:.1f}px">{CFG['head']}{DOT}</div>
  {f'<div style="font-weight:900;font-size:52px;letter-spacing:-1.5px;margin-top:34px">{CFG["sub2"]}</div>' if CFG.get('sub2') else ''}
@@ -67,7 +79,7 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M
  <div style="display:flex;align-items:center;gap:12px">{circ('PH')}<span style="font-weight:900;font-size:30px">+233 (0)50 332 0548</span></div>
  <div style="display:flex;align-items:center;gap:8px">{circ('IG')}{circ('TT')}{circ('X')}<span style="margin-left:4px">@thedanagstudio</span></div>
 </div>
-<div class="a" style="inset:0;z-index:50;pointer-events:none;opacity:{.16 if navy else .1};mix-blend-mode:{"overlay" if navy else "multiply"};background-size:256px;background-image:url({R}/grain.png)"></div>
+<div class="a" style="inset:0;z-index:50;pointer-events:none;opacity:{.16 if navy else 0};mix-blend-mode:{"overlay" if navy else "multiply"};background-size:256px;background-image:url({R}/grain.png)"></div>
 <script>document.fonts.ready.then(()=>document.body.dataset.done=1)</script></body></html>"""
 tmp = '/tmp/_hero.html'; open(tmp, 'w').write(html)
 with sync_playwright() as p:

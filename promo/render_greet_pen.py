@@ -26,6 +26,10 @@ cols = [['Flyer &amp; Poster Design', 'Business Card Design', 'Brochure Design']
         ['Product Visuals', 'Social Media Design', 'Social Media Mgt.'],
         ['Website Design', 'Website Redesign', 'And more']]
 svc = ''.join('<div>' + ''.join(f'<div style="display:flex;align-items:center;gap:12px;padding:9px 0"><span style="width:13px;height:13px;border-radius:50%;border:3px solid {GOLD};flex:none"></span>{t}</div>' for t in c) + '</div>' for c in cols)
+if head.endswith('?'):
+    HEAD = f'<span class="g">{head}</span>'
+else:
+    HEAD = f'<span class="g">{head}</span><span style="display:inline-block;width:.236em;height:.236em;border-radius:50%;background:#fff;margin-left:.02em"></span>'
 html = f"""<html><head><style>
 @font-face{{font-family:M;font-weight:500;src:url({F}montserrat-latin-500-normal.woff2)}}
 @font-face{{font-family:M;font-weight:700;src:url({F}montserrat-latin-700-normal.woff2)}}
@@ -47,7 +51,7 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M
 </div>
 <div class="a" style="left:90px;top:330px">
   <div style="font-weight:500;font-size:68px;line-height:1;letter-spacing:-1px;color:#fff;margin-top:0">{script}</div>
- <div id="h" style="font-weight:900;font-size:176px;line-height:.95;letter-spacing:-7px;margin-top:8px;white-space:nowrap"><span class="g">{head}</span><span style="display:inline-block;width:.236em;height:.236em;border-radius:50%;background:#fff;margin-left:.02em"></span></div>
+ <div id="h" style="font-weight:900;font-size:176px;line-height:.95;letter-spacing:-7px;margin-top:8px;white-space:nowrap">{HEAD}</div>
  <div style="position:relative;width:600px;height:170px;margin-top:30px">
   <svg class="a" viewBox="0 0 560 150" preserveAspectRatio="none" style="inset:0"><path d="M30 118 C-10 70 40 22 230 14 C430 6 548 40 540 82 C532 124 400 140 250 140 C130 140 40 128 8 104" fill="none" stroke="{GOLD}" stroke-width="3.5" stroke-linecap="round"/><path d="M8 104 C0 118 -6 132 16 146" fill="none" stroke="{GOLD}" stroke-width="3.5" stroke-linecap="round"/></svg>
   <div class="a" style="left:74px;right:56px;top:58px;font-weight:700;font-size:23px;line-height:1.38">{msg}</div>

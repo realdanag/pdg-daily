@@ -18,14 +18,14 @@ CSS = f"""@font-face{{font-family:M;font-weight:400;src:url({F}montserrat-latin-
 @font-face{{font-family:M;font-weight:900;src:url({F}montserrat-latin-900-normal.woff2)}}
 *{{margin:0;padding:0;box-sizing:border-box}}
 body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M;color:{N};
- background:radial-gradient(820px 700px at 0% 0%,rgba(255,193,7,.20),transparent 62%),linear-gradient(160deg,#ffffff 0%,#f7f8fb 60%,#eef0f5 100%)}}
+ background:#ffffff}}
 .a{{position:absolute}}
 .gn{{background:linear-gradient(90deg,#022452 0%,#2a4d82 100%);-webkit-background-clip:text;background-clip:text;color:transparent}}
 .gg{{background:linear-gradient(90deg,#C98F00 0%,#FFC107 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.03em}}
 .num{{font-weight:400;font-size:230px;line-height:.8;letter-spacing:-12px}}
 svg.d *{{fill:none;stroke:{N};stroke-width:5;stroke-linecap:round;stroke-linejoin:round}} svg.d .y{{stroke:{G}}} svg.d .f{{fill:{G};stroke:none}}"""
 MARK = f'<svg class="a" viewBox="252 255 749 664" style="right:-220px;top:380px;width:640px;opacity:.022"><path fill="{N}" fill-rule="evenodd" d="{rb.MK["nodot"]}"/><path fill="{N}" d="{rb.MK["dot"]}"/></svg>'
-GRAIN = f'<div class="a" style="inset:0;z-index:50;pointer-events:none;opacity:.12;mix-blend-mode:multiply;background-size:256px;background-image:url({R}/grain.png)"></div>'
+GRAIN = f'<div class="a" style="inset:0;z-index:50;pointer-events:none;opacity:0;mix-blend-mode:multiply;background-size:256px;background-image:url({R}/grain.png)"></div>'
 def page(body, swipe=True):
     foot = f'<div class="a" style="left:90px;bottom:84px;font-weight:700;font-size:24px">@thedanagstudio</div>'
     if swipe: foot += f'<div class="a" style="right:90px;bottom:84px;font-weight:900;font-size:20px;letter-spacing:4px;color:#C98F00">SWIPE &gt;&gt;</div>'
@@ -52,11 +52,11 @@ ITEMS = [
  ('A new look', 'every week', 'New colours and fonts every post make you forgettable. Pick a style and own it.', 'mix'),
  ('Designing', 'for yourself', "Your customer's taste matters more than yours. Design for the person you want to reach.", 'self'),
 ]
-slides = [page(f'''<div class="a" style="left:84px;top:360px"><span class="num gg" style="font-weight:900;font-size:420px;letter-spacing:-20px">5</span></div>
-<div class="a" style="left:400px;top:430px;font-weight:900;font-size:96px;line-height:1;letter-spacing:-3px"><span class="gn">Design</span></div>
-<div class="a" style="left:90px;top:720px;font-weight:900;font-size:150px;line-height:.95;letter-spacing:-6px"><span class="gn">MISTAKES</span></div>
-<div class="a" style="left:92px;top:880px;font-weight:700;font-size:62px;line-height:1.05;letter-spacing:-2px"><span class="gg">That are costing<br>you customers</span>{DOT}</div>
-<div class="a" style="left:92px;top:1100px;font-weight:700;font-size:20px;letter-spacing:6px;color:#C98F00">DESIGN TIP 07</div>''')]
+slides = [page(f'''<div class="a" style="left:90px;top:300px;font-weight:700;font-size:20px;letter-spacing:6px;color:#C98F00">DESIGN TIP 07</div>
+<div class="a" style="left:78px;top:360px"><span class="num gg" style="font-weight:900;font-size:470px;letter-spacing:-20px">5</span></div>
+<div class="a" style="left:400px;top:400px;font-weight:900;font-size:118px;line-height:.98;letter-spacing:-4px"><span class="gn">Design</span><br><span class="gn">mistakes</span></div>
+<div class="a" style="left:404px;top:650px;font-weight:700;font-size:54px;line-height:1.08;letter-spacing:-1.5px"><span class="gg">that are costing<br>you customers</span>{DOT}</div>
+<div class="a" style="left:92px;top:930px;width:880px;font-weight:600;font-size:32px;line-height:1.4;color:#2a3f63">Fix these five and your designs will start doing their job: getting people to stop, read and buy.</div>''')]
 for i, (a, b, t, k) in enumerate(ITEMS, 1):
     slides.append(page(f'''<div class="a" style="left:84px;top:250px"><span class="num gn">0{i}</span></div>
 <div class="a" style="left:90px;top:480px;right:90px"><div style="font-weight:900;font-size:92px;line-height:1;letter-spacing:-3.5px;text-transform:uppercase"><span class="gn">{a}</span><br><span class="gg">{b}</span>{DOT}</div>

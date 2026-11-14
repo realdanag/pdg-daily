@@ -19,7 +19,7 @@ circ = lambda k: f'<span style="width:36px;height:36px;border-radius:50%;backgro
 chips = ''.join(f'<span style="border:1.5px solid {"rgba(255,193,7,.6)" if navy else "rgba(2,36,82,.25)"};border-radius:40px;padding:12px 22px;font-weight:600;font-size:22px">{t}</span>'
                 for t in ['Flyers &amp; Posters', 'Product Visuals', 'Social Media', 'Websites'])
 bg = ('linear-gradient(160deg,#032F65 0%,#022452 40%,#011631 78%,#010F21 100%)' if navy else
-      'radial-gradient(820px 700px at 0% 0%,rgba(255,193,7,.22),transparent 62%),linear-gradient(160deg,#ffffff 0%,#f7f8fb 60%,#eef0f5 100%)')
+      '#ffffff')
 WD = d.strftime('%A').upper()
 html = f"""<html><head><style>
 @font-face{{font-family:M;font-weight:400;src:url({F}montserrat-latin-400-normal.woff2)}}
@@ -49,7 +49,7 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M
  <div style="display:flex;align-items:center;gap:12px">{circ('PH')}<span style="font-weight:900;font-size:30px">+233 (0)50 332 0548</span></div>
  <div style="display:flex;align-items:center;gap:8px">{circ('IG')}{circ('TT')}{circ('X')}<span style="margin-left:4px">@thedanagstudio</span></div>
 </div>
-<div class="a" style="inset:0;z-index:50;pointer-events:none;opacity:{.16 if navy else .1};mix-blend-mode:{"overlay" if navy else "multiply"};background-size:256px;background-image:url({R}/grain.png)"></div>
+<div class="a" style="inset:0;z-index:50;pointer-events:none;opacity:{.16 if navy else 0};mix-blend-mode:{"overlay" if navy else "multiply"};background-size:256px;background-image:url({R}/grain.png)"></div>
 <script>document.fonts.ready.then(()=>{{const h=document.getElementById('h');let f=190;while(h.scrollWidth>900&&f>100){{f-=4;h.style.fontSize=f+'px'}}document.body.dataset.done=1}})</script></body></html>"""
 tmp = '/tmp/_d2.html'; open(tmp, 'w').write(html)
 with sync_playwright() as p:
