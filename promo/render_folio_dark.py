@@ -149,7 +149,7 @@ web = ''.join(f"""<div style="position:relative;width:900px;height:330px">{tile(
 <div style="position:absolute;right:0;bottom:-18px">{tile(m, 150, 310, 'top')}</div>
 <div style="position:absolute;left:22px;bottom:20px;background:{GOLD};color:#022452;font-weight:900;font-size:19px;padding:9px 18px;border-radius:20px">{t}</div></div>"""
               for d, m, t in [('web-ss-desktop', 'web-ss-mobile', 'scentxspice.com'), ('web-cc-desktop', 'web-cc-mobile', 'careercaptains.org')])
-SL.append(page(f"""<div class="a" style="left:90px;top:150px">{stack('NEW TO THE STUDIO', 'WEBSITE DESIGN', 84)}</div>
+SL.append(page(f"""<div class="a" style="left:90px;top:150px">{stack('WEBSITES THAT', 'WORK FOR YOU', 84)}</div>
 <div class="a" style="left:90px;top:400px;display:flex;flex-direction:column;gap:46px">{web}</div>"""))
 # 14 reviews quotes
 card = lambda t, n, big=False: (f'<div style="border:2px solid rgba(255,193,7,.6);border-radius:24px;padding:{36 if big else 28}px;background:rgba(1,15,33,.45)">'
@@ -185,6 +185,7 @@ with sync_playwright() as p:
     b = p.chromium.launch(executable_path='/usr/bin/google-chrome')
     pg = b.new_page(viewport={'width': 1080, 'height': 1350}, device_scale_factor=2)
     for k, h in enumerate(SL, 1):
+        if os.environ.get('ONLY') and str(k) != os.environ['ONLY']: continue
         t = f'/tmp/_fd{k}.html'; open(t, 'w').write(h); pg.goto(pathlib.Path(t).as_uri()); pg.wait_for_timeout(900)
         pg.evaluate("""()=>{for(const s of document.querySelectorAll('svg.hs')){const bb=s.getBBox();
             s.setAttribute('viewBox',`${bb.x} ${bb.y} ${bb.width} ${bb.height}`);s.setAttribute('width',bb.width);s.setAttribute('height',bb.height)}}""")
