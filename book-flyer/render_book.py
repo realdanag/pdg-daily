@@ -41,6 +41,17 @@ def line(text, cap, color, dot=False, track=0.02, dot_color='#fff'):
         stops = ''.join(f'<stop offset="{o}" stop-color="{c}"/>' for o, c in GR[color])
         defs = f'<defs><linearGradient id="{gid}" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{0 if color != "#022452" else 0}" y2="{-G["cap"]}">{stops}</linearGradient></defs>'
         color = f'url(#{gid})'
+    q = text.rstrip().endswith('?')
+    if q:  # question: no brand dot; the dot of the '?' turns gold
+        dot = False
+        cid = 'q' + gid
+        defs += (f'<clipPath id="{cid}t"><rect x="-10" y="-10" width="{w + 20:.1f}" height="{cap * 0.80 + 10:.2f}"/></clipPath>'
+                 f'<clipPath id="{cid}b"><rect x="-10" y="{cap * 0.80:.2f}" width="{w + 20:.1f}" height="{cap:.2f}"/></clipPath>')
+        last = paths.rsplit('<path', 1)
+        body = (f'<g fill="{color}" transform="translate(0,{cap:.2f}) scale({s:.6f},{-s:.6f})">{last[0]}</g>'
+                f'<g clip-path="url(#{cid}t)"><g fill="{color}" transform="translate(0,{cap:.2f}) scale({s:.6f},{-s:.6f})"><path{last[1]}</g></g>'
+                f'<g clip-path="url(#{cid}b)"><g fill="#FFC107" transform="translate(0,{cap:.2f}) scale({s:.6f},{-s:.6f})"><path{last[1]}</g></g>')
+        return (f'<svg class="hs" width="{w:.1f}" height="{cap:.1f}" viewBox="0 0 {w:.1f} {cap:.1f}" style="display:block;overflow:visible">{defs}{body}</svg>')
     if dot:
         r = cap * 0.084; gap = cap * 0.06
         extra = f'<circle cx="{w + gap + r:.2f}" cy="{cap - r:.2f}" r="{r:.2f}" fill="{dot_color}"/>'
