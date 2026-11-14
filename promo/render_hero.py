@@ -37,6 +37,12 @@ CFG = {
    head='Stronger than<br><span class="g">you think</span>', sub='', mask='-webkit-mask-image:radial-gradient(closest-side,#000 45%,transparent 100%)'),
  'P9': dict(theme='navy', pos='left', pic='330px 170px/72% auto no-repeat', size=78, top=250,
    head='Let\'s<br>charge up<br>your<br><span class="g">visibility</span>', sub='Designs that put energy back into your brand.', mask='-webkit-mask-image:radial-gradient(closest-side,#000 45%,transparent 100%)'),
+'W1': dict(theme='navy', pos='left', pic='center', size=72, top=210,
+   head='You get<br>3 seconds<br><span class="g">to make<br>them stay</span>', sub='Every flyer, post and page has one job: earn the next look.', sw=420),
+ 'W2': dict(theme='navy', pos='top', pic='center', size=62, top=190,
+   head='Your audience is waiting<span class="g">.</span><br><span class="g">Give them a reason to stay</span>', sub='Great design turns a quick look into a lasting impression.', sw=640),
+ 'W3': dict(theme='navy', pos='left', pic='center', size=80, top=430,
+   head='Consistency<br>builds<br><span class="g">trust</span>', sub='Same colours, same fonts, same quality. Every single time.', sw=440),
 }[key]
 navy = CFG['theme'] == 'navy'
 if not navy and not photo.endswith('.png'):
