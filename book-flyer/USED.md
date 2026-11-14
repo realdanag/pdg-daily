@@ -10,6 +10,7 @@ Every headline must invite people to book Danag / make him their designer. No em
 - 2026-11-12 · navy · (pre-made by Danag's request) · LET'S HANDLE YOUR NEXT · DESIGN PROJECT · promo/render_project.py
 - 2026-11-13 · white · LOOKING FOR A DESIGNER? · MAKE DANAG · YOUR DESIGNER · layout B
 - 2026-11-14 · navy · PLANNING NEXT WEEK? · LET DANAG · DESIGN IT · layout B
+- 2026-11-14 · white · SEARCHING FOR A DESIGNER? · YOUR SEARCH · ENDS HERE · layout B (v2, crown-style day)
 
 ## Ideas (use or replace)
 - BUILDING A BRAND? · LET'S MAKE IT · UNFORGETTABLE
