@@ -20,11 +20,11 @@ S = [
   ['Eyes start', 'top left'], 'Readers enter at the top left by instinct. Put your most important message there.', ''),
  ('T05-3.jpg', '0px -250px/125% auto no-repeat', 'left:90px;top:200px;width:900px', 'linear-gradient(180deg,rgba(1,15,33,.8) 0%,rgba(1,15,33,.3) 40%,transparent 55%)',
   ['Big things', 'get seen', 'first'], 'The largest element wins the first glance. Size things on purpose.', ''),
- ('T05-4-alt.jpg', '120px -110px/100% auto no-repeat', 'left:90px;bottom:250px;width:600px', 'linear-gradient(20deg,rgba(1,15,33,.9) 0%,rgba(1,15,33,.35) 50%,transparent 68%)',
+ ('T05-4-alt.jpg', 'center', 'left:90px;bottom:200px;width:760px;--fs:112px', 'linear-gradient(20deg,rgba(1,15,33,.9) 0%,rgba(1,15,33,.35) 50%,transparent 68%)',
   ['Contrast', 'leads the', 'eye'], 'Light against dark, bold against thin. Contrast is a map for the eye.', ''),
  ('T05-5.jpg', '300px 50%/auto 100% no-repeat', 'left:90px;top:200px;width:520px;--fs:70px', 'linear-gradient(90deg,rgba(1,15,33,.85) 0%,rgba(1,15,33,.3) 45%,transparent 62%)',
   ['Feeling', 'comes before', 'thinking'], 'People feel your design in a split second. The logic comes later.', ''),
- ('T05-6.jpg', 'center', 'left:90px;top:260px;width:360px;--fs:58px', 'linear-gradient(90deg,rgba(1,15,33,.88) 0%,rgba(1,15,33,.35) 45%,transparent 60%)',
+ ('T05-6.jpg', 'center', 'left:90px;top:250px;width:440px;--fs:74px', 'linear-gradient(90deg,rgba(1,15,33,.88) 0%,rgba(1,15,33,.35) 45%,transparent 60%)',
   ['One surprise', 'makes it', 'stick'], "You don't need to change everything. One unexpected detail is enough.", ''),
  ('T05-7.jpg', 'center', 'left:90px;top:200px;width:900px', 'linear-gradient(180deg,rgba(1,15,33,.8) 0%,rgba(1,15,33,.3) 40%,transparent 55%)',
   ['Predictable', 'gets forgotten'], 'If it looks like everything else, the brain skips it.', ''),
@@ -61,7 +61,7 @@ html = f"""<html><head><style>
 @font-face{{font-family:M;font-weight:900;src:url({F}montserrat-latin-900-normal.woff2)}}
 *{{margin:0;padding:0;box-sizing:border-box}} body{{width:{W}px;height:1350px;overflow:hidden;position:relative;font-family:M;color:#fff;background:#011631}} .a{{position:absolute}}
 </style></head><body>{panels}
-<svg class="a" style="left:0;top:0;z-index:4" width="{W}" height="1350" viewBox="0 0 {W} 1350"><polyline points="{pts}" fill="none" stroke="#FFC107" stroke-width="4" stroke-linecap="round"/><polyline points="{pts2}" fill="none" stroke="#E3A600" stroke-width="1.6" opacity=".8"/></svg>
+<svg class="a" style="left:0;top:0;z-index:4" width="{W}" height="1350" viewBox="0 0 {W} 1350"><defs><linearGradient id="tf" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{W}" y2="0"><stop offset="0" stop-color="#FFC107"/><stop offset="{(4320+30)/W:.4f}" stop-color="#FFC107"/><stop offset="{(4320+200)/W:.4f}" stop-color="#FFC107" stop-opacity=".12"/><stop offset="{(5400-200)/W:.4f}" stop-color="#FFC107" stop-opacity=".12"/><stop offset="{(5400-30)/W:.4f}" stop-color="#FFC107"/><stop offset="1" stop-color="#FFC107"/></linearGradient><linearGradient id="tf2" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{W}" y2="0"><stop offset="0" stop-color="#E3A600"/><stop offset="{(4320+30)/W:.4f}" stop-color="#E3A600"/><stop offset="{(4320+200)/W:.4f}" stop-color="#E3A600" stop-opacity="0"/><stop offset="{(5400-200)/W:.4f}" stop-color="#E3A600" stop-opacity="0"/><stop offset="{(5400-30)/W:.4f}" stop-color="#E3A600"/><stop offset="1" stop-color="#E3A600"/></linearGradient></defs><polyline points="{pts}" fill="none" stroke="url(#tf)" stroke-width="4" stroke-linecap="round"/><polyline points="{pts2}" fill="none" stroke="url(#tf2)" stroke-width="1.6" opacity=".8"/></svg>
 <div class="a" style="inset:0;z-index:50;pointer-events:none;opacity:.14;mix-blend-mode:overlay;background-size:256px;background-image:url({R}/grain.png)"></div>
 <script>document.fonts.ready.then(()=>document.body.dataset.done=1)</script></body></html>"""
 tmp = '/tmp/_t05.html'; open(tmp, 'w').write(html)
