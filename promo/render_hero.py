@@ -25,9 +25,21 @@ CFG = {
  'P6': dict(theme='white', pos='left', pic='40px 110px/100% auto no-repeat', size=128,
    head='We<br><b>Can</b><br><b>Fix</b><br>Your<br>Brand', light=True,
    sub='Let\'s talk business.', top=345),
+'P7': dict(theme='white', pos='topc', pic='center', size=96,
+   head='Don\'t just exist.<br><span class="g">Be unmissable</span>', sub='Designs that step out of line and get your business noticed.'),
+ 'P8': dict(theme='navy', pos='top', pic='center top/112% auto no-repeat', size=100,
+   head='Don\'t blend in.<br><span class="g">Be seen</span>', sub='In a crowded market, the brand that stands out wins.'),
+ 'P11': dict(theme='navy', pos='left', pic='center', size=70, top=200,
+   head='Your vision<span class="g">.</span><br><span class="g">Our design</span>', sub='We listen, then design what your business really needs.', sw=380),
+ 'P12': dict(theme='navy', pos='top', top=175, pic='center bottom/100% auto no-repeat', size=74,
+   head='Size doesn\'t matter<span class="g">.</span><br><span class="g">Strategy does</span>', sub=''),
+ 'P10': dict(theme='navy', pos='top', pic='center 140px/86% auto no-repeat', size=84,
+   head='Stronger than<br><span class="g">you think</span>', sub='', mask='-webkit-mask-image:radial-gradient(closest-side,#000 45%,transparent 100%)'),
+ 'P9': dict(theme='navy', pos='left', pic='330px 170px/72% auto no-repeat', size=78, top=250,
+   head='Let\'s<br>charge up<br>your<br><span class="g">visibility</span>', sub='Designs that put energy back into your brand.', mask='-webkit-mask-image:radial-gradient(closest-side,#000 45%,transparent 100%)'),
 }[key]
 navy = CFG['theme'] == 'navy'
-if not navy and not photo.endswith('-cut.png'):
+if not navy and not photo.endswith('.png'):
     from PIL import ImageStat
     im0 = Image.open(photo).convert('RGB'); w0, h0 = im0.size
     cs = [ImageStat.Stat(im0.crop(b)).median for b in [(0, 0, w0 // 8, h0 // 8), (w0 - w0 // 8, 0, w0, h0 // 8), (0, h0 // 2, w0 // 10, h0 // 2 + h0 // 10)]]
@@ -67,7 +79,7 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M
 .a{{position:absolute}} .g{{color:{G}}} b{{font-weight:900}}
 .box{{display:inline-block;background:{G};color:{N};padding:0 .14em;border-radius:.08em;line-height:1.02}}
 </style></head><body>
-<div class="a" style="inset:0;background:url({pathlib.Path(photo).resolve().as_uri()}) {CFG['pic'] if '/' in CFG['pic'] else CFG['pic'] + '/cover'}"></div>
+<div class="a" style="inset:0;background:url({pathlib.Path(photo).resolve().as_uri()}) {CFG['pic'] if '/' in CFG['pic'] else CFG['pic'] + '/cover'};{CFG.get('mask','')}"></div>
 <div class="a" style="inset:0;background:{shade}"></div>
 <div class="a" style="left:0;right:0;bottom:0;height:300px;background:linear-gradient(180deg,transparent,{"rgba(1,15,33,.95)" if navy else "rgba(255,255,255,.92)"})"></div>
 
@@ -76,7 +88,7 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M
 <div class="a" style="{box}">
  <div style="font-weight:{head_w};font-size:{size}px;line-height:1.0;letter-spacing:-{size*0.035:.1f}px">{CFG['head']}{DOT}</div>
  {f'<div style="font-weight:900;font-size:52px;letter-spacing:-1.5px;margin-top:34px">{CFG["sub2"]}</div>' if CFG.get('sub2') else ''}
- <div style="font-weight:500;font-size:30px;line-height:1.42;margin-top:{26 if CFG.get('sub2') else 34}px;color:{SUBC};{'margin-left:auto;margin-right:auto;' if pos=='topc' else ''}max-width:{860 if pos.startswith('top') else 500}px">{CFG['sub']}</div>
+ <div style="font-weight:500;font-size:30px;line-height:1.42;margin-top:{26 if CFG.get('sub2') else 34}px;color:{SUBC};{'margin-left:auto;margin-right:auto;' if pos=='topc' else ''}max-width:{CFG.get('sw', 860 if pos.startswith('top') else 500)}px">{CFG['sub']}</div>
  {f'<div style="display:inline-block;margin-top:40px;background:{N};color:#fff;border-radius:16px;padding:18px 34px;font-weight:700;font-size:30px">{CFG["btn"]}</div>' if CFG.get('btn') else ''}
 </div>
 <div class="a" style="left:90px;right:90px;bottom:80px;display:flex;align-items:center;justify-content:space-between;font-weight:700;font-size:23px">
