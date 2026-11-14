@@ -17,3 +17,4 @@ Every headline must invite people to book Danag / make him their designer. No em
 - YOUR BRAND DESERVES · A DESIGN THAT · FITS YOU
 - STILL USING TEMPLATES? · LET'S BUILD · YOUR OWN
 - NEW BUSINESS? · START WITH A · CROWN
+- 2026-11-14 · white · HAPPY WEEKEND, SATURDAY (pen hero, single slide) · posted 09:00 after Tip 04 + navy phone promo
