@@ -16,3 +16,9 @@ in a dark scene, desaturated except the object tinted in the accent colour, big 
 (alternating accent/white lines, tilted slightly), small all-caps supporting line, SWIPE >> bottom-left.
 Linking (seamless) carousels: one wide canvas sliced into 1080px slides so an object/thread runs across slides.
 DANAG version: navy/black scene, object tinted GOLD, headline gold + white. Photos come from Danag (Claude writes prompts).
+
+## 2026-11-14b — "one coloured hero in a dark crowd" + numbered tip carousels (20 refs)
+- 01 chair, 03 figure, 20 pawn: one coloured object among identical dark ones = "stand out" message. DANAG version: gold among navy/black.
+- 02 top-down meeting chairs, 04 puzzle piece, 05 glass bolt, 06 rock on egg: single metaphor object, headline split white/accent, short line + contact strip.
+- 07-12 Techvint: white numbered tip carousel, huge thin number, two-tone stacked bold headline (black→brand colour gradient), one-line body, line-art doodle bottom-right, handle bottom-left. Good for white tip slides.
+- 13-19 TOF: dark tip carousel, cover with giant number + stacked headline + B/W cutout on accent circle; inner slides = bold 2-line rule (2nd line accent) + thin sub-line + side-by-side before/after mockups; plain closing line slide.
