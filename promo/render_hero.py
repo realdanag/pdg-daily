@@ -60,7 +60,7 @@ if pos == 'top':
     shade = f'linear-gradient(180deg,{"rgba(1,15,33,.92)" if navy else "rgba(255,255,255,.95)"} 0%,{"rgba(1,15,33,.55)" if navy else "rgba(255,255,255,.55)"} 34%,transparent 52%)'
     box = f'left:90px;right:90px;top:200px'
 elif pos == 'topc':
-    shade = 'linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.75) 45%,transparent 60%)'
+    shade = 'linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.6) 24%,transparent 34%)'
     box = 'left:90px;right:90px;top:220px;text-align:center'
 elif pos == 'left6':
     shade = 'linear-gradient(90deg,#fff 0px,#fff 380px,rgba(255,255,255,0) 540px)'; box = 'left:90px;width:520px;top:392px'
