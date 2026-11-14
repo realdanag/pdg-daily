@@ -55,6 +55,18 @@ D['P11'] = photo('P11-sharp.jpg') + f'''
  <div style="font-weight:500;font-size:66px;letter-spacing:-1.5px;color:#c9d3e6">Bold Designs.</div>
  <div style="font-weight:900;font-size:76px;letter-spacing:-2px;color:{G}">Real Impact{DOT}</div>
  <div style="height:4px;width:260px;background:{G};margin:10px 0 0 auto;border-radius:3px"></div></div>''' + FOOT
+SV = ''.join(f'<span style="border:1.5px solid rgba(255,193,7,.65);border-radius:40px;padding:12px 22px;font-weight:600;font-size:23px;background:rgba(2,20,48,.55)">{t}</span>' for t in ['Flyers &amp; Posters', 'Product Visuals', 'Social Media', 'Websites'])
+D['B1'] = photo('L4.jpg', 'center 62%/cover') + f'''
+<div class="a" style="left:0;right:0;top:0;height:640px;background:linear-gradient(180deg,rgba(1,12,28,.9),rgba(1,12,28,.55) 60%,transparent)"></div>
+<div class="a" style="left:0;right:0;bottom:0;height:520px;background:linear-gradient(180deg,transparent,rgba(1,12,28,.92) 45%,#010c1c)"></div>
+<div class="a" style="left:0;right:0;top:80px;display:flex;justify-content:center">{logo(60)}</div>
+<div class="a" style="left:0;right:0;top:200px;text-align:center;line-height:1.02">
+ <div style="font-weight:500;font-size:60px;letter-spacing:-1.5px">Your customers are looking<span style="color:{G}">.</span></div>
+ <div style="font-weight:900;font-size:92px;letter-spacing:-3px;color:{G};margin-top:10px">Let them find you{DOT}</div>
+ <div style="font-weight:500;font-size:28px;color:#dfe5f1;margin-top:24px">Designs that put your business in the best seat.</div></div>
+<div class="a" style="left:80px;right:80px;top:1000px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px">{SV}</div>
+<div class="a" style="left:0;right:0;top:1110px;display:flex;justify-content:center"><div style="background:{G};color:{N};border-radius:60px;padding:22px 46px;font-weight:900;font-size:36px;display:flex;align-items:center;gap:14px">{ic('PH', N, 30)} WhatsApp +233 (0)50 332 0548</div></div>
+<div class="a" style="left:0;right:0;bottom:56px;text-align:center;font-weight:700;font-size:22px;color:#c9d3e6;letter-spacing:1px">@thedanagstudio &nbsp;&middot;&nbsp; Crowned in Craft</div>'''
 CSS = f"""@font-face{{font-family:M;font-weight:500;src:url({F}montserrat-latin-500-normal.woff2)}}
 @font-face{{font-family:M;font-weight:600;src:url({F}montserrat-latin-600-normal.woff2)}}
 @font-face{{font-family:M;font-weight:700;src:url({F}montserrat-latin-700-normal.woff2)}}
