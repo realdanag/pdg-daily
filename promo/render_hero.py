@@ -17,14 +17,13 @@ CFG = {
    head='Be the<br>brand<br><span class="g">that<br>stands</span><br>in the<br>light', sub='Designs that put your business where everyone can see it.'),
  'P3': dict(theme='navy', pos='top', pic='center 75%',
    head='Complete<br>your <span class="g">brand</span>', sub='DANAG STUDIO is the missing piece between you and designs that sell.'),
- 'P4': dict(theme='white', pos='topc', pic='center 330px/100% auto no-repeat', size=78,
+ 'P4': dict(theme='white', pos='topc', pic='center 220px/100% auto no-repeat', size=78,
    head='Good <span class="box">design</span> is what<br>separates you from<br>everyone else', sub='Flyers, product visuals and social media that make you instantly recognisable.', btn='Stand out now'),
  'P5': dict(theme='navy', pos='left', pic='70% center', size=96,
    head='You\'ve got<br><span class="g">the audience</span>', sub2='But not their <span class="g">attention?</span>', sub='Having followers isn\'t enough. You need designs that make them stop.'),
- 'P6': dict(theme='white', pos='left6', pic='221px -199px/1300px auto no-repeat', size=128,
+ 'P6': dict(theme='white', pos='left', pic='150px 0/100% auto no-repeat', size=128,
    head='We<br><b>Can</b><br><b>Fix</b><br>Your<br>Brand', light=True,
-   extra='<div class="a" style="left:TX;top:TY;font-weight:900;font-size:128px;color:#FFC107;transform:rotate(-12deg);z-index:7">\'t</div>',
-   sub='Just kidding. We can. Let\'s talk business.'),
+   sub='Let\'s talk business.', top=345),
 }[key]
 navy = CFG['theme'] == 'navy'
 if not navy and not photo.endswith('-cut.png'):
@@ -50,7 +49,7 @@ elif pos == 'left6':
     shade = 'linear-gradient(90deg,#fff 0px,#fff 380px,rgba(255,255,255,0) 540px)'; box = 'left:90px;width:520px;top:392px'
 else:
     shade = f'linear-gradient(90deg,{"rgba(1,15,33,.94)" if navy else "rgba(255,255,255,.96)"} 0%,{"rgba(1,15,33,.6)" if navy else "rgba(255,255,255,.7)"} 40%,transparent 60%)'
-    box = 'left:90px;width:520px;top:250px'
+    box = f"left:90px;width:520px;top:{CFG.get('top', 250)}px"
 head_w = 400 if CFG.get('light') else 900
 html = f"""<html><head><style>
 @font-face{{font-family:M;font-weight:400;src:url({F}montserrat-latin-400-normal.woff2)}}
