@@ -9,3 +9,10 @@ House rules still apply: navy/white/gold only, alternate white and navy, gradien
 light grain, faint logo mark, logo once per slide, brand dot = same thickness as a letter stem (like the leg of the Y),
 balanced spacing, no emojis, lowercase hashtags.
 If a design needs a photo that cannot be generated in code, write Danag a detailed image prompt and ask him to generate it.
+
+2026-11-14 set (references/2026-11-14): "hero object" posters for design tips and agency promos.
+One striking real object (pen nib, ship+bicycle, hanging phone, lone bright chair, dumbbells, match, padlock, nail, mug)
+in a dark scene, desaturated except the object tinted in the accent colour, big stacked 2-tone headline
+(alternating accent/white lines, tilted slightly), small all-caps supporting line, SWIPE >> bottom-left.
+Linking (seamless) carousels: one wide canvas sliced into 1080px slides so an object/thread runs across slides.
+DANAG version: navy/black scene, object tinted GOLD, headline gold + white. Photos come from Danag (Claude writes prompts).
