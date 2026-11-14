@@ -37,9 +37,9 @@ D['P8'] = photo('P8.jpg', 'center top/112% auto') + f'''
 D['P10'] = photo('P10.jpg') + f'''
 <div class="a" style="left:90px;top:80px">{logo(54)}</div>
 <div class="a" style="left:0;right:0;top:168px;text-align:center;line-height:1.16">
- <div style="font-weight:500;font-size:54px;color:{G}">Your <b style="font-weight:900;color:#fff">Brand</b> can carry</div>
- <div style="font-weight:500;font-size:54px;color:{G}">more than you think{DOT}</div>
- <svg width="440" height="30" viewBox="0 0 440 30" style="display:block;margin:6px 0 0 520px"><path d="M6 18 C120 6 300 4 434 10 M60 26 C170 18 300 16 400 20" fill="none" stroke="{G}" stroke-width="5" stroke-linecap="round"/></svg></div>
+ <div style="font-weight:500;font-size:54px;color:#fff">We build brands that</div>
+ <div style="font-weight:900;font-size:58px;color:{G}">don't crack under pressure{DOT}</div>
+ <svg width="440" height="30" viewBox="0 0 440 30" style="display:block;margin:6px 0 0 360px"><path d="M6 18 C120 6 300 4 434 10 M60 26 C170 18 300 16 400 20" fill="none" stroke="{G}" stroke-width="5" stroke-linecap="round"/></svg></div>
 <div class="a" style="left:0;right:0;top:965px;text-align:center;font-weight:900;font-size:50px;line-height:1.02;color:#5a3d00;mix-blend-mode:multiply;text-shadow:0 1px 0 rgba(255,230,160,.6)">Your<br>Brand</div>
 <div class="a" style="left:0;right:0;bottom:56px;display:flex;justify-content:center"><div style="border:2px solid {G};background:rgba(255,193,7,.12);border-radius:40px;padding:14px 34px;font-weight:900;font-size:28px">Let's talk: <span style="color:{G}">+233 (0)50 332 0548</span></div></div>'''
 D['P11'] = photo('P11-sharp.jpg') + f'''
