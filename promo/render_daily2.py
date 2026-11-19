@@ -31,7 +31,7 @@ html = f"""<html><head><style>
 body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M;color:{TX};background:{bg}}}
 .a{{position:absolute}}
 </style></head><body>
-<div class="a" style="left:-30px;top:690px;width:1140px;font-weight:900;font-size:300px;line-height:1;letter-spacing:-10px;white-space:nowrap;color:transparent;-webkit-text-stroke:2px {"rgba(255,255,255,.07)" if navy else "rgba(2,36,82,.07)"}" id="ghost">{WD}</div>
+<div class="a" style="left:-30px;top:770px;width:1140px;font-weight:900;font-size:300px;line-height:1;letter-spacing:-10px;white-space:nowrap;color:transparent;-webkit-text-stroke:2px {"rgba(255,255,255,.07)" if navy else "rgba(2,36,82,.07)"}" id="ghost">{WD}</div>
 <svg class="a" viewBox="252 255 749 664" style="right:-200px;top:120px;width:560px;opacity:{.035 if navy else .022}"><path fill="{"#fff" if navy else N}" fill-rule="evenodd" d="{rb.MK['nodot']}"/><path fill="{"#fff" if navy else N}" d="{rb.MK['dot']}"/></svg>
 <div class="a" style="left:90px;top:84px">{logo}</div>
 <div class="a" style="right:90px;top:84px;display:flex;align-items:center;gap:20px">
@@ -44,7 +44,7 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M
  <div id="h" style="font-weight:900;font-size:190px;line-height:1;letter-spacing:-8px;margin-top:6px;white-space:nowrap">{w1}<span style="display:inline-block;background:{G};color:{N};padding:0 .1em 0 .06em;margin-left:.04em;border-radius:.06em;line-height:1.08">{w2}<span style="display:inline-block;width:.236em;height:.236em;border-radius:50%;background:{N};margin-left:.03em"></span></span></div>
  <div style="display:flex;gap:26px;margin-top:56px;max-width:760px"><div style="width:4px;background:{G};flex:none"></div><div style="font-weight:500;font-size:34px;line-height:1.42;color:{SUB}">{msg}</div></div>
 </div>
-<div class="a" style="left:90px;right:90px;top:1010px;display:flex;flex-wrap:wrap;gap:14px">{chips}</div>
+<div class="a" style="left:90px;right:90px;top:1092px;display:flex;flex-wrap:wrap;gap:14px">{chips}</div>
 <div class="a" style="left:90px;right:90px;bottom:80px;padding-top:30px;border-top:1px solid {"rgba(255,255,255,.18)" if navy else "rgba(2,36,82,.15)"};display:flex;align-items:center;justify-content:space-between;font-weight:700;font-size:23px">
  <div style="display:flex;align-items:center;gap:12px">{circ('PH')}<span style="font-weight:900;font-size:30px">+233 (0)50 332 0548</span></div>
  <div style="display:flex;align-items:center;gap:8px">{circ('IG')}{circ('TT')}{circ('X')}<span style="margin-left:4px">@thedanagstudio</span></div>
