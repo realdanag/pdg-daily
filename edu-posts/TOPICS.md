@@ -6,6 +6,7 @@
 - 06 · 2026-11-14 · 5 design rules I never break
 - 05 · 2026-11-16 · How eyes read your design (linking carousel)
 - 07 · 2026-11-18 · 5 design mistakes that are costing you customers
+- 08 · 2026-11-20 · Small spacing, big difference (letter and line spacing)
 # Backlog ideas (use in any order, add more):
 - Contrast makes text readable
 - White space is not empty space
@@ -13,6 +14,5 @@
 - Visual hierarchy: what to read first
 - Choosing a colour palette for your brand
 - Logo dos and don'ts
-- Kerning and letter spacing basics
 - Picking images that sell
 - Consistency builds brand trust
