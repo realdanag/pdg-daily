@@ -33,7 +33,7 @@ CSS = f'''@font-face{{font-family:M;font-weight:500;src:url({(F/"montserrat-lati
 @font-face{{font-family:SC;src:url({(F/"sacramento-latin-400-normal.woff2").as_uri()})}}
 *{{margin:0;padding:0;box-sizing:border-box}}body{{width:1080px;height:1350px;overflow:hidden;font-family:M}}
 .s{{position:relative;width:1080px;height:1350px;overflow:hidden}}.a{{position:absolute}}
-.w{{background:linear-gradient(180deg,#ffffff,#eef1f6);color:#022452}}
+.w{{background:#ffffff;color:#022452}}
 .n{{background:linear-gradient(135deg,#032F65 0%,#022452 45%,#011631 80%,#010F21 100%);color:#fff}}
 .hd{{position:absolute;left:84px;right:84px;top:64px;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:17px;letter-spacing:4px}}
 .hd .pg{{opacity:.55}}
@@ -44,7 +44,7 @@ CSS = f'''@font-face{{font-family:M;font-weight:500;src:url({(F/"montserrat-lati
 .dot{{display:inline-block;width:.236em;height:.236em;border-radius:50%;background:#FFC107;margin-left:.03em}}
 .gl{{position:absolute;border-radius:50%;filter:blur(30px);pointer-events:none}}
 .gr{{position:absolute;inset:0;pointer-events:none;z-index:50;background-image:url({(F.parent/'grain.png').as_uri()});background-size:256px}}
-.n .gr{{opacity:.16;mix-blend-mode:overlay}} .w .gr{{opacity:.12;mix-blend-mode:multiply}}
+.n .gr{{opacity:.16;mix-blend-mode:overlay}} .w .gr{{display:none}}
 .p1{{font-weight:500;font-size:29px;line-height:1.4}} .w .p1{{color:#6b7488}} .n .p1{{color:rgba(255,255,255,.7)}}
 .p2{{font-weight:600;font-size:29px;line-height:1.4}}
 .card{{width:430px;height:538px;border-radius:26px;overflow:hidden;position:relative;box-shadow:0 18px 40px rgba(1,15,33,.18)}}
@@ -91,7 +91,7 @@ with sync_playwright() as pw:
     b = pw.chromium.launch(executable_path='/usr/bin/google-chrome'); pg = b.new_page(viewport={'width': 1080, 'height': 1350}, device_scale_factor=2)
     for i, fn in enumerate(slides, 1):
         d = (i % 2 == 0) != (spec.get('start') == 'navy')
-        html = f'<!DOCTYPE html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="s {"n" if d else "w"}">{mark(d)}{"" if d else GLOW}<div class="gr"></div>{head(d,i,T)}{fn(d,i,T)}{foot(d, i==T)}</div></body></html>'
+        html = f'<!DOCTYPE html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="s {"n" if d else "w"}">{mark(d)}<div class="gr"></div>{head(d,i,T)}{fn(d,i,T)}{foot(d, i==T)}</div></body></html>'
         p = out / f'{i:02d}.html'; p.write_text(html); pg.goto(p.as_uri()); pg.wait_for_timeout(700)
         pg.screenshot(path=str(out / f'{i:02d}.png'))
         im = Image.open(out / f'{i:02d}.png').convert('RGB'); im.save(out / f'{i:02d}.jpg', quality=95, subsampling=0)
