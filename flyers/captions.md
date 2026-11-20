@@ -1,0 +1,2 @@
+- 2026-11-19 · Happy Thursday. Great work is built in quiet hours of focus. Stay consistent and let your results speak. #danagstudio #thursday
+- 2026-11-20 · Happy Friday. Finish the week with purpose. Great work lives in the details others overlook. #danagstudio #friday
