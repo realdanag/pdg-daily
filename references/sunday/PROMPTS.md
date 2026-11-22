@@ -35,4 +35,7 @@ crisp detail on the hair texture, editorial portrait, 4:5.
 
 ## Log of models used
 - 2026-11-15 · S1 (navy headwrap woman) · render_sunday.py navy
-- 2026-11-22 · F man (sunglasses, navy turtleneck; assets-hero/SUN-F-cut.png) · used in the v2e style (Danag's favourite, sample 3) as 2026-11-22-v2g. Do not reuse him; v2f and v2e need new models next time.
+- 2026-11-22 · v2e style, waiting for Danag's prompt-E photo (side profile with locs).
+
+## Reserved (not used yet)
+- F man (sunglasses, navy turtleneck; assets-hero/SUN-F-cut.png): Danag wants him for a later Sunday, best fit the v2f style (colour). v2g test render is only a test, not posted.
