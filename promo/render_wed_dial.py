@@ -9,8 +9,8 @@ OUT=sys.argv[1] if len(sys.argv)>1 else f'{R}/flyers/2026-11-25-v1'
 logo=re.sub(r'<\?xml[^>]*>','',open('/home/claude/brand/DANAG-STUDIO-horizontal-on-navy.svg').read()).replace('<svg','<svg style="height:44px;width:auto;display:block"',1)
 ic=lambda k,c,s=20: f'<svg viewBox="0 0 24 24" width="{s}" height="{s}" style="color:{c};flex:none">{IC[k]}</svg>'
 CSS=f'''@font-face{{font-family:M;font-weight:500;src:url({F}montserrat-latin-500-normal.woff2)}}@font-face{{font-family:M;font-weight:600;src:url({F}montserrat-latin-600-normal.woff2)}}@font-face{{font-family:M;font-weight:700;src:url({F}montserrat-latin-700-normal.woff2)}}@font-face{{font-family:M;font-weight:900;src:url({F}montserrat-latin-900-normal.woff2)}}
-*{{margin:0;padding:0;box-sizing:border-box}}body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M;background:linear-gradient(165deg,#022452 0%,#011b3e 45%,#011129 80%,#010b1c 100%)}}.a{{position:absolute}}'''
-noise='''<svg class="a" style="inset:0;width:1080px;height:1350px;z-index:20;pointer-events:none;mix-blend-mode:overlay;opacity:.7"><filter id="nz"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#nz)"/></svg>'''
+*{{margin:0;padding:0;box-sizing:border-box}}body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M;background:linear-gradient(165deg,#011c44 0%,#01142f 45%,#010c20 80%,#010714 100%)}}.a{{position:absolute}}'''
+noise='''<svg class="a" style="inset:0;width:1080px;height:1350px;z-index:20;pointer-events:none;mix-blend-mode:overlay;opacity:1"><filter id="nz"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#nz)"/></svg>'''
 # dial
 CX,CY,RO,RI=540,1890,1190,1095
 def pt(r,a): a=math.radians(a); return CX+r*math.sin(a), CY-r*math.cos(a)
@@ -71,7 +71,7 @@ html=f'''<body>
 <g filter="url(#up)"><path d="M0,58 C120,30 230,62 360,44 C470,28 520,70 640,52 C760,34 860,64 960,40 C1010,30 1050,36 1080,44 L1080,160 L0,160 Z" fill="#010d22"/></g>
 <path d="M0,58 C120,30 230,62 360,44 C470,28 520,70 640,52 C760,34 860,64 960,40 C1010,30 1050,36 1080,44 L1080,160 L0,160 Z" fill="url(#pt)"/>
 <path d="M0,58 C120,30 230,62 360,44 C470,28 520,70 640,52 C760,34 860,64 960,40 C1010,30 1050,36 1080,44" fill="none" stroke="#FFC107" stroke-width="2.5"/></svg>
-{noise}<svg class="a" style="inset:0;width:1080px;height:1350px;z-index:21;opacity:.13"><filter id="nz2"><feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#nz2)"/></svg>
+{noise}<svg class="a" style="inset:0;width:1080px;height:1350px;z-index:21;opacity:.24"><filter id="nz2"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#nz2)"/></svg>
 </body>'''
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path='/usr/bin/google-chrome'); pg=b.new_page(viewport={'width':1080,'height':1350},device_scale_factor=2)
