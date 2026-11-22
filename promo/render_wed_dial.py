@@ -36,8 +36,8 @@ dial=f'''<svg class="a" style="inset:0;width:1080px;height:1350px;z-index:3" vie
 <filter id="sh" x="-50%" y="-20%" width="200%" height="140%"><feDropShadow dx="-10" dy="14" stdDeviation="12" flood-color="#000814" flood-opacity=".55"/></filter></defs>
 <path d="M-40,560 C150,470 260,700 420,600 S700,430 860,560 S1040,620 1140,500" stroke="rgba(255,255,255,.22)" stroke-width="2" fill="none"/>
 {band}
-{needle(340,-53,"url(#ww)",540,1215,.72)}
-{needle(410,0,"url(#gg)",540,1215,.95)}<circle cx="540" cy="1215" r="58" fill="url(#gg)" filter="url(#sh)"/><circle cx="540" cy="1215" r="40" fill="#011129"/><circle cx="540" cy="1215" r="16" fill="url(#gg)"/>
+{needle(395,-28,"url(#ww)",540,1281,.66)}
+{needle(474,0,"url(#gg)",540,1281,.86)}<circle cx="540" cy="1281" r="58" fill="url(#gg)" filter="url(#sh)"/><circle cx="540" cy="1281" r="40" fill="#011129"/><circle cx="540" cy="1281" r="16" fill="url(#gg)"/>
 </svg>'''
 brush=f'''<svg class="a" style="left:300px;top:448px;width:480px;height:40px;z-index:6" viewBox="0 0 480 40"><path d="M6,26 C120,10 300,8 474,14 L470,20 C320,18 160,22 10,32 Z" fill="{G}"/><path d="M60,34 C200,26 330,25 440,27" stroke="{G}" stroke-width="3" fill="none" opacity=".7"/></svg>'''
 bell='<svg viewBox="0 0 24 24" width="54" height="54"><path fill="#FFC107" d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22zm7-6V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v5l-2 2v1h18v-1z"/></svg>'
@@ -58,8 +58,8 @@ html=f'''<body>
  </div>
 </div>
 
-<div class="a" style="left:76px;right:76px;bottom:28px;z-index:9;display:flex;align-items:center;justify-content:space-between">
- <div style="display:flex;align-items:center;gap:12px;background:{G};color:{N};font-weight:800;font-weight:900;font-size:26px;border-radius:40px;padding:18px 32px;box-shadow:0 10px 24px rgba(0,5,16,.6)">{ic("PH",N,26)}Book: +233 (0)50 332 0548</div>
+<div class="a" style="left:60px;right:60px;bottom:28px;z-index:9;display:flex;align-items:center;justify-content:space-between">
+ <div style="display:flex;align-items:center;gap:12px;background:{G};color:{N};font-weight:800;font-weight:900;font-size:22px;border-radius:40px;padding:16px 26px;box-shadow:0 10px 24px rgba(0,5,16,.6)">{ic("PH",N,26)}Book: +233 (0)50 332 0548</div>
  <div style="color:#fff;font-weight:700;font-size:26px">#danagstudio</div>
 </div>
 <svg class="a" style="left:0;top:1215px;width:1080px;height:160px;z-index:7" viewBox="0 0 1080 160"><defs>
