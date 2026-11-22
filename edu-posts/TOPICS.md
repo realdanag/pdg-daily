@@ -7,9 +7,9 @@
 - 05 · 2026-11-16 · How eyes read your design (linking carousel)
 - 07 · 2026-11-18 · 5 design mistakes that are costing you customers
 - 08 · 2026-11-20 · Small spacing, big difference (letter and line spacing)
+- 09 · 2026-11-23 · Can they read it? (contrast)
+- 10 · 2026-11-24 · White space is not empty
 # Backlog ideas (use in any order, add more):
-- Contrast makes text readable
-- White space is not empty space
 - The rule of thirds in flyers
 - Visual hierarchy: what to read first
 - Choosing a colour palette for your brand

@@ -2,3 +2,5 @@
 - 2026-11-20 · Happy Friday. Finish the week with purpose. Great work lives in the details others overlook. #danagstudio #friday
 - 2026-11-21 · Happy Saturday. Rest is part of the process. Recharge today and return with sharper ideas and bolder work. #danagstudio #saturday
 - 2026-11-22 · Happy Sunday. Slow down and plan the week with intention. Clear ideas today become strong designs tomorrow. #danagstudio #sunday
+- 2026-11-23 · Happy Monday. New week, blank canvas. Plan with purpose and create boldly. #danagstudio #monday
+- 2026-11-24 · Happy Tuesday. Progress beats perfection. Keep moving, keep refining and let the results follow. #danagstudio #tuesday

@@ -1,0 +1,58 @@
+{
+ "kicker": "DESIGN TIP 09",
+ "start": "navy",
+ "cover": {
+  "l1": "Can they",
+  "l2": "read it?",
+  "text": "If people have to squint, they scroll past. Strong contrast keeps your message clear.",
+  "visual": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:linear-gradient(165deg,#0f5b3a,#073823);\"><div style=\"position:absolute;left:30px;top:40px;color:#ffd84d;font-weight:700;font-size:14px;letter-spacing:3px\">KOFI'S JUICE BAR</div><div style=\"position:absolute;left:28px;top:90px;color:#ffffff;font-weight:900;font-size:50px;line-height:1.02\">Fresh<br>Pineapple<br>Ginger</div><div style=\"position:absolute;left:30px;top:290px;color:#d8efe2;font-weight:600;font-size:17px;line-height:1.5\">Cold-pressed daily in Osu.<br>GH₵ 25 a bottle.</div><div style=\"position:absolute;left:30px;top:425px;background:#ffd84d;color:#073823;font-weight:800;font-size:15px;padding:9px 14px;border-radius:6px\">Order: 000 000 0000</div></div>",
+  "visual_back": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:#ffffff;\"><div style=\"position:absolute;left:30px;top:40px;color:#ffe58a;font-weight:700;font-size:14px;letter-spacing:3px\">KOFI'S JUICE BAR</div><div style=\"position:absolute;left:28px;top:90px;color:#ffd84d;font-weight:900;font-size:50px;line-height:1.02\">Fresh<br>Pineapple<br>Ginger</div><div style=\"position:absolute;left:30px;top:290px;color:#c9d9b8;font-weight:600;font-size:17px;line-height:1.5\">Cold-pressed daily in Osu.<br>GH₵ 25 a bottle.</div><div style=\"position:absolute;left:30px;top:440px;color:#e6e6e6;font-weight:700;font-size:15px\">Order: 000 000 0000</div></div>"
+ },
+ "tips": [
+  {
+   "title1": "Light on light",
+   "title2": "disappears",
+   "problem": "Pale text on a pale background fades away, especially on a phone in the sun.",
+   "fix": "Put light text on a dark colour, or dark text on a light one.",
+   "before": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:#ffffff;\"><div style=\"position:absolute;left:30px;top:40px;color:#ffe58a;font-weight:700;font-size:14px;letter-spacing:3px\">KOFI'S JUICE BAR</div><div style=\"position:absolute;left:28px;top:90px;color:#ffd84d;font-weight:900;font-size:50px;line-height:1.02\">Fresh<br>Pineapple<br>Ginger</div><div style=\"position:absolute;left:30px;top:290px;color:#c9d9b8;font-weight:600;font-size:17px;line-height:1.5\">Cold-pressed daily in Osu.<br>GH₵ 25 a bottle.</div><div style=\"position:absolute;left:30px;top:440px;color:#e6e6e6;font-weight:700;font-size:15px\">Order: 000 000 0000</div></div>",
+   "after": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:linear-gradient(165deg,#0f5b3a,#073823);\"><div style=\"position:absolute;left:30px;top:40px;color:#ffd84d;font-weight:700;font-size:14px;letter-spacing:3px\">KOFI'S JUICE BAR</div><div style=\"position:absolute;left:28px;top:90px;color:#ffffff;font-weight:900;font-size:50px;line-height:1.02\">Fresh<br>Pineapple<br>Ginger</div><div style=\"position:absolute;left:30px;top:290px;color:#d8efe2;font-weight:600;font-size:17px;line-height:1.5\">Cold-pressed daily in Osu.<br>GH₵ 25 a bottle.</div><div style=\"position:absolute;left:30px;top:425px;background:#ffd84d;color:#073823;font-weight:800;font-size:15px;padding:9px 14px;border-radius:6px\">Order: 000 000 0000</div></div>",
+   "before_note": "Yellow on white,<br>hard to read.",
+   "after_note": "White on deep green,<br>clear at a glance."
+  },
+  {
+   "title1": "Busy pictures",
+   "title2": "swallow text",
+   "problem": "Words placed straight on a busy photo or pattern get lost.",
+   "fix": "Add a dark shade behind the text so it sits on a calm area.",
+   "before": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:repeating-linear-gradient(45deg,#c96a2b 0 24px,#e9b04b 24px 48px,#7a3e1d 48px 72px,#f4d9a6 72px 96px);\"><div style=\"position:absolute;left:30px;top:60px;color:#ffffff;font-weight:900;font-size:56px;line-height:1\">Afro Night</div><div style=\"position:absolute;left:30px;top:140px;color:#fff3d6;font-weight:600;font-size:18px\">Live band · Food · Dancing</div><div style=\"position:absolute;left:30px;top:190px;color:#ffffff;font-weight:600;font-size:17px;line-height:1.5\">Friday 4 December, 8pm<br>Labadi Beach</div><div style=\"position:absolute;left:30px;top:440px;color:#fff;font-weight:700;font-size:15px\">Tickets: 000 000 0000</div></div>",
+   "after": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:repeating-linear-gradient(45deg,#c96a2b 0 24px,#e9b04b 24px 48px,#7a3e1d 48px 72px,#f4d9a6 72px 96px);\"><div style=\"position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,8,2,.15) 0%,rgba(20,8,2,.55) 40%,rgba(20,8,2,.92) 100%)\"></div><div style=\"position:absolute;left:26px;top:250px;right:26px\"><div style=\"font-weight:900;font-size:56px;line-height:1;color:#fff\">Afro Night</div><div style=\"margin-top:12px;font-weight:600;font-size:17px;color:#ffd9a0\">Live band · Food · Dancing</div><div style=\"margin-top:12px;font-weight:600;font-size:16px;line-height:1.5;color:#fff\">Friday 4 December, 8pm · Labadi Beach</div></div><div style=\"position:absolute;left:26px;top:440px;color:#ffd9a0;font-weight:700;font-size:15px\">Tickets: 000 000 0000</div></div>",
+   "before_note": "Text fights<br>the pattern.",
+   "after_note": "A dark shade<br>gives it a stage."
+  },
+  {
+   "title1": "Clashing colours",
+   "title2": "vibrate",
+   "problem": "Red on green, or two bright colours of the same strength, buzz and tire the eye.",
+   "fix": "Keep one calm ground and use the bright colour for one key word.",
+   "before": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:#2e8b3e;\"><div style=\"position:absolute;left:30px;top:50px;color:#d93a2b;font-weight:700;font-size:14px;letter-spacing:3px\">MAAME'S FABRICS</div><div style=\"position:absolute;left:28px;top:110px;color:#e0402f;font-weight:900;font-size:62px;line-height:1\">Christmas<br>Sale</div><div style=\"position:absolute;left:30px;top:270px;color:#d65a3a;font-weight:600;font-size:18px;line-height:1.5\">Up to 40% off kente,<br>lace and ankara.</div><div style=\"position:absolute;left:30px;top:440px;color:#cc4a33;font-weight:700;font-size:15px\">Makola · 000 000 0000</div></div>",
+   "after": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:#0d2b1a;\"><div style=\"position:absolute;left:30px;top:50px;color:#9fd3a8;font-weight:700;font-size:14px;letter-spacing:3px\">MAAME'S FABRICS</div><div style=\"position:absolute;left:28px;top:110px;color:#ffffff;font-weight:900;font-size:62px;line-height:1\">Christmas<br><span style=\"color:#ff5a45\">Sale</span></div><div style=\"position:absolute;left:30px;top:270px;color:#e4f2e7;font-weight:600;font-size:18px;line-height:1.5\">Up to 40% off kente,<br>lace and ankara.</div><div style=\"position:absolute;left:30px;top:440px;color:#9fd3a8;font-weight:700;font-size:15px\">Makola · 000 000 0000</div></div>",
+   "before_note": "Red on green<br>hurts the eyes.",
+   "after_note": "One bright word<br>on a calm ground."
+  }
+ ],
+ "recap": {
+  "l1": "Contrast",
+  "l2": "checklist",
+  "items": [
+   "Dark on light, or light on dark",
+   "Shade busy photos behind text",
+   "One bright accent, not two",
+   "Check it on your phone"
+  ]
+ },
+ "cta": {
+  "l1": "Make it",
+  "l2": "impossible to miss",
+  "text": "Let's design your next flyer so every word reads clearly."
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "kicker": "DESIGN TIP 10",
+ "cover": {
+  "l1": "White space",
+  "l2": "is not empty",
+  "text": "The space you leave around things is what makes the important parts stand out.",
+  "visual": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:#fff7f2;\"><div style=\"position:absolute;left:44px;top:56px;color:#b0577a;font-weight:700;font-size:13px;letter-spacing:5px\">GLOW SKIN SPA</div><div style=\"position:absolute;left:42px;top:120px;color:#4a1d33;font-weight:900;font-size:48px;line-height:1.05\">Slow down.<br><span style=\"color:#e64b7b\">Glow up.</span></div><div style=\"position:absolute;left:44px;top:258px;color:#7a2e52;font-weight:600;font-size:18px;line-height:1.5\">20% off every facial<br>this December.</div><div style=\"position:absolute;left:44px;top:410px;color:#4a1d33;font-weight:800;font-size:16px\">Book: 000 000 0000</div><div style=\"position:absolute;left:44px;top:436px;color:#b0577a;font-weight:600;font-size:13px\">East Legon</div></div>",
+  "visual_back": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:#fff7f2;\"><div style=\"position:absolute;left:16px;top:14px;color:#b0577a;font-weight:800;font-size:12px\">GLOW SKIN SPA · EAST LEGON · OPEN DAILY</div><div style=\"position:absolute;left:14px;top:36px;color:#7a2e52;font-weight:900;font-size:27px;line-height:1.05\">Facials! Massage! Nails! Waxing! Lashes!</div><div style=\"position:absolute;left:14px;top:128px;background:#e64b7b;color:#fff;font-weight:900;font-size:30px;padding:4px 10px\">20% OFF</div><div style=\"position:absolute;left:180px;top:128px;background:#ffcf33;color:#7a2e52;font-weight:900;font-size:24px;padding:4px 10px\">NEW!</div><div style=\"position:absolute;left:14px;top:190px;color:#7a2e52;font-weight:600;font-size:15px;line-height:1.3;right:14px\">Book now and relax with our expert team. Walk-ins welcome. Gift cards available. Bridal packages. Couples room. Free tea.</div><div style=\"position:absolute;left:14px;top:300px;color:#e64b7b;font-weight:800;font-size:18px\">★ ★ ★ ★ ★  Best spa in town!</div><div style=\"position:absolute;left:14px;top:340px;color:#7a2e52;font-weight:700;font-size:13px;right:14px;line-height:1.4\">Call 000 000 0000 · WhatsApp 000 000 0000 · hello@glowspa.example</div><div style=\"position:absolute;left:14px;top:400px;color:#b0577a;font-weight:800;font-size:12px;right:14px\">FACIALS · MASSAGE · NAILS · WAXING · LASHES · BROWS</div></div>"
+ },
+ "tips": [
+  {
+   "title1": "Stop filling",
+   "title2": "every corner",
+   "problem": "Packing in every service, offer and badge leaves the eye nowhere to rest.",
+   "fix": "Keep one message, one offer and one way to contact you.",
+   "before": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:#fff7f2;\"><div style=\"position:absolute;left:16px;top:14px;color:#b0577a;font-weight:800;font-size:12px\">GLOW SKIN SPA · EAST LEGON · OPEN DAILY</div><div style=\"position:absolute;left:14px;top:36px;color:#7a2e52;font-weight:900;font-size:27px;line-height:1.05\">Facials! Massage! Nails! Waxing! Lashes!</div><div style=\"position:absolute;left:14px;top:128px;background:#e64b7b;color:#fff;font-weight:900;font-size:30px;padding:4px 10px\">20% OFF</div><div style=\"position:absolute;left:180px;top:128px;background:#ffcf33;color:#7a2e52;font-weight:900;font-size:24px;padding:4px 10px\">NEW!</div><div style=\"position:absolute;left:14px;top:190px;color:#7a2e52;font-weight:600;font-size:15px;line-height:1.3;right:14px\">Book now and relax with our expert team. Walk-ins welcome. Gift cards available. Bridal packages. Couples room. Free tea.</div><div style=\"position:absolute;left:14px;top:300px;color:#e64b7b;font-weight:800;font-size:18px\">★ ★ ★ ★ ★  Best spa in town!</div><div style=\"position:absolute;left:14px;top:340px;color:#7a2e52;font-weight:700;font-size:13px;right:14px;line-height:1.4\">Call 000 000 0000 · WhatsApp 000 000 0000 · hello@glowspa.example</div><div style=\"position:absolute;left:14px;top:400px;color:#b0577a;font-weight:800;font-size:12px;right:14px\">FACIALS · MASSAGE · NAILS · WAXING · LASHES · BROWS</div></div>",
+   "after": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:#fff7f2;\"><div style=\"position:absolute;left:44px;top:56px;color:#b0577a;font-weight:700;font-size:13px;letter-spacing:5px\">GLOW SKIN SPA</div><div style=\"position:absolute;left:42px;top:120px;color:#4a1d33;font-weight:900;font-size:48px;line-height:1.05\">Slow down.<br><span style=\"color:#e64b7b\">Glow up.</span></div><div style=\"position:absolute;left:44px;top:258px;color:#7a2e52;font-weight:600;font-size:18px;line-height:1.5\">20% off every facial<br>this December.</div><div style=\"position:absolute;left:44px;top:410px;color:#4a1d33;font-weight:800;font-size:16px\">Book: 000 000 0000</div><div style=\"position:absolute;left:44px;top:436px;color:#b0577a;font-weight:600;font-size:13px\">East Legon</div></div>",
+   "before_note": "Everything shouts,<br>nothing is heard.",
+   "after_note": "One message,<br>room to breathe."
+  },
+  {
+   "title1": "Give it",
+   "title2": "proper margins",
+   "problem": "Text pushed to the edges looks cramped and can be cut off when printed or posted.",
+   "fix": "Leave a clear margin on every side and line everything up to it.",
+   "before": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:#1c1712;\"><div style=\"position:absolute;left:4px;top:6px;color:#f2b544;font-weight:900;font-size:30px\">MAMA ESI'S KITCHEN</div><div style=\"position:absolute;left:4px;top:44px;color:#f4ead8;font-weight:600;font-size:19px;line-height:1.45\">Jollof rice with chicken 45<br>Waakye special 35<br>Banku and tilapia 60<br>Fried rice and fish 50<br>Kelewele 15</div><div style=\"position:absolute;left:4px;top:214px;color:#f2b544;font-weight:700;font-size:16px\">Open Mon to Sat, 10am to 9pm</div><div style=\"position:absolute;left:4px;top:470px;color:#f4ead8;font-weight:700;font-size:16px\">Delivery: 000 000 0000</div></div>",
+   "after": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:#1c1712;\"><div style=\"position:absolute;left:40px;top:44px;color:#f2b544;font-weight:900;font-size:24px;letter-spacing:1px\">MAMA ESI'S KITCHEN</div><div style=\"position:absolute;left:40px;right:40px;top:96px;font-weight:600;font-size:17px;line-height:2.1;color:#f4ead8\"><div style=\"display:flex;justify-content:space-between\"><span>Jollof with chicken</span><span style=\"color:#f2b544\">45</span></div><div style=\"display:flex;justify-content:space-between\"><span>Waakye special</span><span style=\"color:#f2b544\">35</span></div><div style=\"display:flex;justify-content:space-between\"><span>Banku and tilapia</span><span style=\"color:#f2b544\">60</span></div><div style=\"display:flex;justify-content:space-between\"><span>Fried rice and fish</span><span style=\"color:#f2b544\">50</span></div><div style=\"display:flex;justify-content:space-between\"><span>Kelewele</span><span style=\"color:#f2b544\">15</span></div></div><div style=\"position:absolute;left:40px;top:372px;color:#c9bda6;font-weight:600;font-size:14px\">Mon to Sat · 10am to 9pm</div><div style=\"position:absolute;left:40px;top:420px;color:#f2b544;font-weight:800;font-size:16px\">Delivery: 000 000 0000</div></div>",
+   "before_note": "Jammed against<br>the edges.",
+   "after_note": "Even margins,<br>easy to scan."
+  },
+  {
+   "title1": "Group what",
+   "title2": "belongs together",
+   "problem": "When every line has the same gap, people can't tell which details go together.",
+   "fix": "Keep related lines close and put bigger gaps between groups.",
+   "before": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:#ffffff;\"><div style=\"position:absolute;left:30px;top:40px;color:#0b3d91;font-weight:900;font-size:28px\">CITY AUTO CARE</div><div style=\"position:absolute;left:30px;top:90px;color:#0b3d91;font-weight:800;font-size:20px\">Full car wash</div><div style=\"position:absolute;left:30px;top:130px;color:#e63b2e;font-weight:900;font-size:20px\">GH₵ 80</div><div style=\"position:absolute;left:30px;top:170px;color:#0b3d91;font-weight:800;font-size:20px\">Interior cleaning</div><div style=\"position:absolute;left:30px;top:210px;color:#e63b2e;font-weight:900;font-size:20px\">GH₵ 120</div><div style=\"position:absolute;left:30px;top:250px;color:#0b3d91;font-weight:600;font-size:16px\">Spintex Road</div><div style=\"position:absolute;left:30px;top:290px;color:#0b3d91;font-weight:600;font-size:16px\">Open 7am to 7pm</div><div style=\"position:absolute;left:30px;top:330px;color:#0b3d91;font-weight:600;font-size:16px\">Call 000 000 0000</div><div style=\"position:absolute;left:30px;top:370px;color:#0b3d91;font-weight:600;font-size:16px\">Book today</div></div>",
+   "after": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:#ffffff;\"><div style=\"position:absolute;left:36px;top:40px;color:#0b3d91;font-weight:900;font-size:28px\">CITY AUTO CARE</div><div style=\"position:absolute;left:36px;top:112px;\"><div style=\"font-weight:800;font-size:20px;color:#0b3d91\">Full car wash</div><div style=\"font-weight:900;font-size:20px;color:#e63b2e;margin-top:4px\">GH₵ 80</div><div style=\"font-weight:800;font-size:20px;color:#0b3d91;margin-top:22px\">Interior cleaning</div><div style=\"font-weight:900;font-size:20px;color:#e63b2e;margin-top:4px\">GH₵ 120</div></div><div style=\"position:absolute;left:36px;right:36px;top:330px;height:1px;background:#d9e1ef\"></div><div style=\"position:absolute;left:36px;top:352px;\"><div style=\"font-weight:600;font-size:15px;color:#4d6390;line-height:1.6\">Spintex Road · Open 7am to 7pm</div><div style=\"font-weight:800;font-size:17px;color:#0b3d91;margin-top:6px\">Book: 000 000 0000</div></div></div>",
+   "before_note": "Same gaps,<br>no structure.",
+   "after_note": "Clear groups,<br>read in seconds."
+  }
+ ],
+ "recap": {
+  "l1": "Use space",
+  "l2": "on purpose",
+  "items": [
+   "One message per design",
+   "Clear margins on every side",
+   "Group related details",
+   "Let the key line breathe"
+  ]
+ },
+ "cta": {
+  "l1": "Less clutter,",
+  "l2": "more clients",
+  "text": "Let's design something clean that sells for you."
+ }
+}
