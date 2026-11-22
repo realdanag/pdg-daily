@@ -9,8 +9,8 @@ OUT=sys.argv[1] if len(sys.argv)>1 else f'{R}/flyers/2026-11-25-v1'
 logo=re.sub(r'<\?xml[^>]*>','',open('/home/claude/brand/DANAG-STUDIO-horizontal-mono-white.svg').read()).replace('<svg','<svg style="height:44px;width:auto;display:block"',1)
 ic=lambda k,c,s=20: f'<svg viewBox="0 0 24 24" width="{s}" height="{s}" style="color:{c};flex:none">{IC[k]}</svg>'
 CSS=f'''@font-face{{font-family:M;font-weight:500;src:url({F}montserrat-latin-500-normal.woff2)}}@font-face{{font-family:M;font-weight:600;src:url({F}montserrat-latin-600-normal.woff2)}}@font-face{{font-family:M;font-weight:700;src:url({F}montserrat-latin-700-normal.woff2)}}@font-face{{font-family:M;font-weight:900;src:url({F}montserrat-latin-900-normal.woff2)}}
-*{{margin:0;padding:0;box-sizing:border-box}}body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M;background:linear-gradient(160deg,#032F65 0%,#022452 40%,#011631 78%,#010F21 100%)}}.a{{position:absolute}}'''
-noise='''<svg class="a" style="inset:0;width:1080px;height:1350px;z-index:20;pointer-events:none;mix-blend-mode:soft-light;opacity:1"><filter id="nz"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#nz)"/></svg>'''
+*{{margin:0;padding:0;box-sizing:border-box}}body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:M;background:linear-gradient(165deg,#022452 0%,#011b3e 45%,#011129 80%,#010b1c 100%)}}.a{{position:absolute}}'''
+noise='''<svg class="a" style="inset:0;width:1080px;height:1350px;z-index:20;pointer-events:none;mix-blend-mode:overlay;opacity:.35"><filter id="nz"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#nz)"/></svg>'''
 # dial
 CX,CY,RO,RI=540,1960,1190,1095
 def pt(r,a): a=math.radians(a); return CX+r*math.sin(a), CY-r*math.cos(a)
@@ -28,7 +28,7 @@ for d,a in zip(days,angs):
     band+=f'<text x="{x:.1f}" y="{y:.1f}" transform="rotate({a} {x:.1f} {y:.1f})" text-anchor="middle" dominant-baseline="central" font-family="M" font-weight="{900 if w else 600}" font-size="{29 if w else 32}" letter-spacing="1" fill="{N if w else "rgba(255,255,255,.8)"}">{d.upper() if w else d}</text>'
 def needle(L,ang,fill,px,py,w=1):
     k=L/320*w
-    p=f'M0,{-L} L{9*k:.1f},{-.74*L} C{42*k:.1f},{-.64*L} {40*k:.1f},{-.52*L} {9*k:.1f},{-.44*L} L{8*k:.1f},0 L{-8*k:.1f},0 L{-9*k:.1f},{-.44*L} C{-40*k:.1f},{-.52*L} {-42*k:.1f},{-.64*L} {-9*k:.1f},{-.74*L} Z'
+    p=f'M0,{-L} L{13*k:.1f},{-.70*L} C{60*k:.1f},{-.65*L} {60*k:.1f},{-.53*L} {13*k:.1f},{-.50*L} L{10*k:.1f},0 L{-10*k:.1f},0 L{-13*k:.1f},{-.50*L} C{-60*k:.1f},{-.53*L} {-60*k:.1f},{-.65*L} {-13*k:.1f},{-.70*L} Z'
     return f'<path d="{p}" transform="translate({px},{py}) rotate({ang})" fill="{fill}" filter="url(#sh)"/>'
 dial=f'''<svg class="a" style="inset:0;width:1080px;height:1350px;z-index:3" viewBox="0 0 1080 1350"><defs>
 <linearGradient id="gg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffd54a"/><stop offset=".5" stop-color="#FFC107"/><stop offset="1" stop-color="#e0a200"/></linearGradient>
@@ -36,7 +36,7 @@ dial=f'''<svg class="a" style="inset:0;width:1080px;height:1350px;z-index:3" vie
 <filter id="sh" x="-50%" y="-20%" width="200%" height="140%"><feDropShadow dx="-10" dy="14" stdDeviation="12" flood-color="#000814" flood-opacity=".55"/></filter></defs>
 <path d="M-40,560 C150,470 260,700 420,600 S700,430 860,560 S1040,620 1140,500" stroke="rgba(255,255,255,.22)" stroke-width="2" fill="none"/>
 {band}
-{needle(600,-17,"url(#ww)",250,1520,.62)}
+{needle(820,-38,"url(#ww)",820,1560,.62)}
 {needle(640,0,"url(#gg)",540,1500,.62)}
 </svg>'''
 brush=f'''<svg class="a" style="left:300px;top:448px;width:480px;height:40px;z-index:6" viewBox="0 0 480 40"><path d="M6,26 C120,10 300,8 474,14 L470,20 C320,18 160,22 10,32 Z" fill="{G}"/><path d="M60,34 C200,26 330,25 440,27" stroke="{G}" stroke-width="3" fill="none" opacity=".7"/></svg>'''
@@ -57,7 +57,7 @@ html=f'''<body>
   <div style="color:rgba(255,255,255,.75);font-weight:500;font-size:23px;margin-top:6px;white-space:nowrap">Refocus now. Small steps still finish strong.</div>
  </div>
 </div>
-<div class="a" style="left:0;right:0;bottom:0;height:150px;z-index:8;background:linear-gradient(180deg,rgba(1,16,42,0),#01102a 45%)"></div>
+
 <div class="a" style="left:76px;right:76px;bottom:52px;z-index:9;display:flex;align-items:center;justify-content:space-between">
  <div style="display:flex;align-items:center;gap:12px;background:{G};color:{N};font-weight:800;font-weight:900;font-size:26px;border-radius:40px;padding:18px 32px">{ic("PH",N,26)}Book: +233 (0)50 332 0548</div>
  <div style="color:#fff;font-weight:700;font-size:26px">#danagstudio</div>
