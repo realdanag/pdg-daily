@@ -35,4 +35,4 @@ crisp detail on the hair texture, editorial portrait, 4:5.
 
 ## Log of models used
 - 2026-11-15 · S1 (navy headwrap woman) · render_sunday.py navy
-- 2026-11-22 · F man (pending photo) · v2f
+- 2026-11-22 · F man (sunglasses, navy turtleneck; assets-hero/SUN-F-cut.png) · used in the v2e style (Danag's favourite, sample 3) as 2026-11-22-v2g. Do not reuse him; v2f and v2e need new models next time.

@@ -3,7 +3,7 @@ Variants: c = split panel + halo + stacked SU/ND/AY (04), d = script Happy + SUN
           e = giant condensed SUN | DAY with portrait between, navy band, centred message (06),
           f = big HAPPY SUNDAY over portrait, faceted background, navy shard footer (07).
 Ideas shared across: greyscale portrait, gold dot grids, gold spheres, gold message box. Navy/white/gold only.
-Usage: python3 promo/render_sunday_set.py OUT VARIANT YYYY-MM-DD "message" [portrait.png]
+Usage: python3 promo/render_sunday_set.py OUT VARIANT YYYY-MM-DD "message" [portrait.png] [portrait height px, v2e]
 """
 import sys, os, re, random, pathlib, datetime as dt
 from playwright.sync_api import sync_playwright
@@ -13,7 +13,9 @@ sys.path.insert(0, B)
 import render_book as rb
 from contacts import IC
 out, V, ds, msg = sys.argv[1:5]
-PORT = pathlib.Path(sys.argv[5] if len(sys.argv) > 5 else f'{R}/assets-hero/S1-cut.png').resolve().as_uri()
+PSRC = pathlib.Path(sys.argv[5] if len(sys.argv) > 5 else f'{R}/assets-hero/S1-cut.png').resolve(); PORT = PSRC.as_uri()
+PH = float(sys.argv[6]) if len(sys.argv) > 6 else None  # optional portrait height (v2e), centred by the photo's aspect
+_pw, _ph = Image.open(PSRC).size; ASP = _pw / _ph
 d = dt.date.fromisoformat(ds)
 F = f'{R}/fonts/'; G = '#FFC107'; G2 = '#E3A600'; N = '#022452'; SUB = '#3a4d6e'
 NAVYGR = 'linear-gradient(135deg,#033A7A 0%,#022452 50%,#011631 100%)'
@@ -88,7 +90,7 @@ elif V == 'e':  # giant condensed SUN | DAY, portrait between, navy band (06)
 <div class="a" style="left:0;right:0;top:380px;height:22px;background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.55) 45%,rgba(2,36,82,.10) 55%,rgba(2,36,82,0));z-index:1"></div>
 <div class="a" style="left:0;right:0;top:780px;height:130px;background:{NAVYGR};border-bottom:5px solid {G}"></div>
 <div class="a" style="right:110px;top:810px;opacity:.9">{dots(G, 9, 3, 22, 3)}</div>
-<div class="a" style="left:0;top:0;width:1080px;height:910px;overflow:hidden;z-index:2"><img src="{PORT}" style="position:absolute;left:{540-332:.0f}px;top:400px;height:820px;filter:grayscale(1) contrast(1.1) drop-shadow(0 20px 40px rgba(2,36,82,.3))"></div>
+<div class="a" style="left:0;top:0;width:1080px;height:910px;overflow:hidden;z-index:2"><img src="{PORT}" style="position:absolute;left:{540-(PH or 820)*ASP/2:.0f}px;top:{400 if not PH else 410}px;height:{PH or 820:.0f}px;{"-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%);" if PH else ""}filter:grayscale(1) contrast(1.1) drop-shadow(0 20px 40px rgba(2,36,82,.3))"></div>
 <div class="a" style="left:140px;right:140px;top:960px;text-align:center;font-weight:700;font-size:31px;line-height:1.45;color:{N}">“{msg}”
  <div style="width:90px;height:5px;background:{G};margin:22px auto 0"></div></div>
 <div class="a" style="left:0;right:0;bottom:0;height:160px;background:{NAVYGR};border-top:5px solid {G}"></div>
