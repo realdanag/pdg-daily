@@ -42,9 +42,9 @@ D['P10'] = photo('P10.jpg') + f'''
  <svg width="440" height="30" viewBox="0 0 440 30" style="display:block;margin:6px 0 0 360px"><path d="M6 18 C120 6 300 4 434 10 M60 26 C170 18 300 16 400 20" fill="none" stroke="{G}" stroke-width="5" stroke-linecap="round"/></svg></div>
 <div class="a" style="left:0;right:0;top:965px;text-align:center;font-weight:900;font-size:50px;line-height:1.02;color:#5a3d00;mix-blend-mode:multiply;text-shadow:0 1px 0 rgba(255,230,160,.6)">Your<br>Brand</div>
 <div class="a" style="left:0;right:0;bottom:56px;display:flex;justify-content:center"><div style="border:2px solid {G};background:rgba(255,193,7,.12);border-radius:40px;padding:14px 34px;font-weight:900;font-size:28px">Let's talk: <span style="color:{G}">+233 (0)50 332 0548</span></div></div>'''
-D['P11'] = photo('P11-sharp.jpg') + '<div class="a" style="inset:0;background:radial-gradient(ellipse 52% 40% at 22% 30%,rgba(1,12,30,.88) 0%,rgba(1,14,34,.7) 45%,rgba(1,16,38,0) 100%)"></div>' + f'''
+D['P11'] = photo('P11-sharp.jpg') + '<div class="a" style="inset:0;background:radial-gradient(ellipse 42% 36% at 14% 27%,rgba(1,12,30,.9) 0%,rgba(1,14,34,.72) 38%,rgba(1,16,38,0) 72%)"></div>' + f'''
 <div class="a" style="left:0;right:0;top:70px;display:flex;justify-content:center">{logo(58)}</div>
-<div class="a" style="left:90px;top:175px;line-height:1.04">
+<div class="a" style="left:90px;top:175px;line-height:1.04;text-shadow:0 2px 18px rgba(1,10,26,.85)">
  <div style="font-weight:900;font-size:110px;color:{G};height:62px;line-height:1">&ldquo;</div>
  <div style="font-weight:500;font-size:62px;letter-spacing:-1.5px">Your Ideas</div>
  <div style="font-weight:500;font-size:62px;letter-spacing:-1.5px;color:#c9d3e6">Our Craft</div>
