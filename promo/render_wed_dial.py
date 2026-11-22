@@ -41,9 +41,12 @@ dial=f'''<svg class="a" style="inset:0;width:1080px;height:1350px;z-index:3" vie
 </svg>'''
 brush=f'''<svg class="a" style="left:300px;top:448px;width:480px;height:40px;z-index:6" viewBox="0 0 480 40"><path d="M6,26 C120,10 300,8 474,14 L470,20 C320,18 160,22 10,32 Z" fill="{G}"/><path d="M60,34 C200,26 330,25 440,27" stroke="{G}" stroke-width="3" fill="none" opacity=".7"/></svg>'''
 bell='<svg viewBox="0 0 24 24" width="54" height="54"><path fill="#FFC107" d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22zm7-6V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v5l-2 2v1h18v-1z"/></svg>'
+FB='<path fill="currentColor" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/>'
+def circ(svg): return f'<div style="width:44px;height:44px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="24" height="24" style="color:{N}">{svg}</svg></div>'
+socials=''.join(circ(x) for x in (IC['IG'],IC['TT'],IC['X'],FB))
 html=f'''<body>
 {dial}
-<div class="a" style="left:76px;top:72px;z-index:6;color:rgba(255,255,255,.85);font-weight:600;font-size:22px;line-height:1.55">IG · TikTok · X: @thedanagstudio<br>FB: Danag Studio</div>
+<div class="a" style="left:76px;top:70px;z-index:6;display:flex;align-items:center;gap:10px">{socials}<span style="color:#fff;font-weight:700;font-size:24px;margin-left:8px">@thedanagstudio</span></div>
 <div class="a" style="right:76px;top:72px;z-index:6">{logo}</div>
 <div class="a" style="left:0;right:0;top:190px;z-index:6;text-align:center">
  <div style="font-weight:900;font-size:136px;line-height:1;letter-spacing:-4px;color:#fff">Halfway</div>
