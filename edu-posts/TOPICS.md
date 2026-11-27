@@ -9,6 +9,7 @@
 - 08 · 2026-11-20 · Small spacing, big difference (letter and line spacing)
 - 09 · 2026-11-23 · Can they read it? (contrast)
 - 10 · 2026-11-24 · White space is not empty
+- 11 · 2026-11-27 · Most people see it on a phone (designing for small screens)
 # Backlog ideas (use in any order, add more):
 - The rule of thirds in flyers
 - Visual hierarchy: what to read first
