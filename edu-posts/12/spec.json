@@ -1,0 +1,68 @@
+{
+ "kicker": "DESIGN TIP 12",
+ "start": "white",
+ "cover": {
+  "l1": "Stop putting it",
+  "l2": "in the middle",
+  "text": "The rule of thirds makes a flyer feel balanced and alive, not stiff.",
+  "visual": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:linear-gradient(160deg,#2b1a3f,#120a1d)\"><div style=\"position:absolute;left:250px;top:240px;width:103.49999999999999px;height:195.49999999999997px\"><div style=\"position:absolute;left:34.5px;top:0;width:34.5px;height:29.9px;background:#222;border-radius:4px\"></div><div style=\"position:absolute;left:0;top:27.599999999999998px;width:103.49999999999999px;height:167.89999999999998px;border-radius:20.7px;background:linear-gradient(135deg,#d9a8ff,#7a5a14);box-shadow:0 14px 30px rgba(0,0,0,.35)\"></div></div><div style=\"position:absolute;left:28px;top:150px;color:#fff;font-weight:900;font-size:40px;line-height:1\">Velvet<br>Night<span style=\"color:#d9a8ff\">.</span></div><div style=\"position:absolute;left:30px;top:250px;color:#cbb8de;font-weight:600;font-size:14px;width:150px;line-height:1.4\">Eau de parfum. Bold, warm and made for evenings out.</div><div style=\"position:absolute;left:28px;bottom:30px;background:#d9a8ff;color:#2b1a3f;font-weight:800;font-size:14px;padding:9px 14px;border-radius:20px\">Order · 000 000 0000</div><div style=\"position:absolute;inset:0;pointer-events:none\"><div style=\"position:absolute;left:33.33%;top:0;bottom:0;border-left:1.5px dashed rgba(255,255,255,.45)\"></div><div style=\"position:absolute;left:66.66%;top:0;bottom:0;border-left:1.5px dashed rgba(255,255,255,.45)\"></div><div style=\"position:absolute;top:33.33%;left:0;right:0;border-top:1.5px dashed rgba(255,255,255,.45)\"></div><div style=\"position:absolute;top:66.66%;left:0;right:0;border-top:1.5px dashed rgba(255,255,255,.45)\"></div></div></div>",
+  "visual_back": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:#f3eee6\"><div style=\"position:absolute;left:155px;top:120px;width:90px;height:170px\"><div style=\"position:absolute;left:30px;top:0;width:30px;height:26px;background:#222;border-radius:4px\"></div><div style=\"position:absolute;left:0;top:24px;width:90px;height:146px;border-radius:18px;background:linear-gradient(135deg,#b08a3c,#7a5a14);box-shadow:0 14px 30px rgba(0,0,0,.35)\"></div></div><div style=\"position:absolute;left:0;right:0;top:330px;text-align:center;color:#3d2e12;font-weight:800;font-size:24px\">Amber Oud</div><div style=\"position:absolute;left:0;right:0;top:366px;text-align:center;color:#7a6a4a;font-weight:500;font-size:13px\">Eau de parfum · 000 000 0000</div></div>"
+ },
+ "tips": [
+  {
+   "title1": "Put your hero",
+   "title2": "on a third line",
+   "problem": "A product stuck in the dead centre feels stiff and static.",
+   "fix": "Slide it onto the left or right third and let the text take the other side.",
+   "before": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:#f3eee6\"><div style=\"position:absolute;left:155px;top:120px;width:90px;height:170px\"><div style=\"position:absolute;left:30px;top:0;width:30px;height:26px;background:#222;border-radius:4px\"></div><div style=\"position:absolute;left:0;top:24px;width:90px;height:146px;border-radius:18px;background:linear-gradient(135deg,#b08a3c,#7a5a14);box-shadow:0 14px 30px rgba(0,0,0,.35)\"></div></div><div style=\"position:absolute;left:0;right:0;top:330px;text-align:center;color:#3d2e12;font-weight:800;font-size:24px\">Amber Oud</div><div style=\"position:absolute;left:0;right:0;top:366px;text-align:center;color:#7a6a4a;font-weight:500;font-size:13px\">Eau de parfum · 000 000 0000</div></div>",
+   "after": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:linear-gradient(160deg,#3a2a0e,#120c03)\"><div style=\"position:absolute;left:250px;top:190px;width:108.0px;height:204.0px\"><div style=\"position:absolute;left:36.0px;top:0;width:36.0px;height:31.2px;background:#222;border-radius:4px\"></div><div style=\"position:absolute;left:0;top:28.799999999999997px;width:108.0px;height:175.2px;border-radius:21.599999999999998px;background:linear-gradient(135deg,#e0b55a,#7a5a14);box-shadow:0 14px 30px rgba(0,0,0,.35)\"></div></div><div style=\"position:absolute;left:28px;top:150px;color:#fff;font-weight:900;font-size:42px;line-height:.98\">Amber<br>Oud<span style=\"color:#e0b55a\">.</span></div><div style=\"position:absolute;left:30px;top:255px;color:#d8c7a2;font-weight:600;font-size:14px;width:150px;line-height:1.4\">Warm, smoky and long lasting.</div><div style=\"position:absolute;left:28px;bottom:30px;background:#e0b55a;color:#120c03;font-weight:800;font-size:14px;padding:9px 14px;border-radius:20px\">000 000 0000</div><div style=\"position:absolute;inset:0;pointer-events:none\"><div style=\"position:absolute;left:33.33%;top:0;bottom:0;border-left:1.5px dashed rgba(255,255,255,.45)\"></div><div style=\"position:absolute;left:66.66%;top:0;bottom:0;border-left:1.5px dashed rgba(255,255,255,.45)\"></div><div style=\"position:absolute;top:33.33%;left:0;right:0;border-top:1.5px dashed rgba(255,255,255,.45)\"></div><div style=\"position:absolute;top:66.66%;left:0;right:0;border-top:1.5px dashed rgba(255,255,255,.45)\"></div></div></div>",
+   "before_note": "Centred and<br>stiff.",
+   "after_note": "Balanced and<br>alive."
+  },
+  {
+   "title1": "Eyes on",
+   "title2": "the top line",
+   "problem": "A face in the middle leaves dead space above the head.",
+   "fix": "Line the eyes up with the top third so the face leads the design.",
+   "before": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:#e9eef5\"><div style=\"position:absolute;left:140px;top:170px;width:120px;height:150px;border-radius:50% 50% 46% 46%;background:#6b4a32\"></div><div style=\"position:absolute;left:100px;top:300px;width:200px;height:200px;border-radius:90px 90px 0 0;background:#1f4e8c\"></div><div style=\"position:absolute;left:0;right:0;top:40px;text-align:center;color:#1f4e8c;font-weight:800;font-size:22px\">Coach Kofi</div></div>",
+   "after": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:linear-gradient(160deg,#16365f,#0a1b33)\"><div style=\"position:absolute;left:170px;top:70px;width:150px;height:190px;border-radius:50% 50% 46% 46%;background:#6b4a32\"></div><div style=\"position:absolute;left:205px;top:150px;width:22px;height:8px;border-radius:4px;background:#2b1a10\"></div><div style=\"position:absolute;left:262px;top:150px;width:22px;height:8px;border-radius:4px;background:#2b1a10\"></div><div style=\"position:absolute;left:120px;top:240px;width:260px;height:260px;border-radius:120px 120px 0 0;background:#3a8ee6\"></div><div style=\"position:absolute;left:24px;top:320px;color:#fff;font-weight:900;font-size:34px;line-height:1\">Coach<br>Kofi<span style=\"color:#7cc0ff\">.</span></div><div style=\"position:absolute;left:26px;top:404px;color:#bcd6f5;font-weight:600;font-size:13px\">Fitness · 000 000 0000</div><div style=\"position:absolute;inset:0;pointer-events:none\"><div style=\"position:absolute;left:33.33%;top:0;bottom:0;border-left:1.5px dashed rgba(255,255,255,.45)\"></div><div style=\"position:absolute;left:66.66%;top:0;bottom:0;border-left:1.5px dashed rgba(255,255,255,.45)\"></div><div style=\"position:absolute;top:33.33%;left:0;right:0;border-top:1.5px dashed rgba(255,255,255,.45)\"></div><div style=\"position:absolute;top:66.66%;left:0;right:0;border-top:1.5px dashed rgba(255,255,255,.45)\"></div></div></div>",
+   "before_note": "Lost in<br>the middle.",
+   "after_note": "Eyes lead<br>the way."
+  },
+  {
+   "title1": "Give it room",
+   "title2": "to look into",
+   "problem": "A subject facing the edge pulls the eye straight off the page.",
+   "fix": "Leave the open space in front of where your subject is looking or moving.",
+   "before": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:#fff3e6\"><div style=\"position:absolute;right:-20px;top:170px;width:170px;height:110px;border-radius:30px 60px 20px 20px;background:#e8572a\"></div><div style=\"position:absolute;right:40px;top:270px;width:36px;height:36px;border-radius:50%;background:#222\"></div><div style=\"position:absolute;right:110px;top:270px;width:36px;height:36px;border-radius:50%;background:#222\"></div><div style=\"position:absolute;left:24px;top:40px;color:#e8572a;font-weight:800;font-size:22px\">Swift Delivery</div><div style=\"position:absolute;left:24px;bottom:30px;color:#7a4a30;font-weight:600;font-size:13px\">000 000 0000</div></div>",
+   "after": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:linear-gradient(160deg,#e8572a,#a8320f)\"><div style=\"position:absolute;left:30px;top:250px;width:170px;height:110px;border-radius:60px 30px 20px 20px;background:#fff\"></div><div style=\"position:absolute;left:50px;top:350px;width:36px;height:36px;border-radius:50%;background:#222\"></div><div style=\"position:absolute;left:140px;top:350px;width:36px;height:36px;border-radius:50%;background:#222\"></div><div style=\"position:absolute;left:210px;top:290px;width:150px;height:4px;background:rgba(255,255,255,.6);border-radius:2px\"></div><div style=\"position:absolute;left:230px;top:310px;width:110px;height:4px;background:rgba(255,255,255,.4);border-radius:2px\"></div><div style=\"position:absolute;left:24px;top:60px;color:#fff;font-weight:900;font-size:40px;line-height:1\">Same day<br>delivery<span style=\"color:#ffd2bf\">.</span></div><div style=\"position:absolute;left:26px;top:160px;color:#ffe1d4;font-weight:600;font-size:13px\">Swift Delivery · 000 000 0000</div><div style=\"position:absolute;inset:0;pointer-events:none\"><div style=\"position:absolute;left:33.33%;top:0;bottom:0;border-left:1.5px dashed rgba(255,255,255,.45)\"></div><div style=\"position:absolute;left:66.66%;top:0;bottom:0;border-left:1.5px dashed rgba(255,255,255,.45)\"></div><div style=\"position:absolute;top:33.33%;left:0;right:0;border-top:1.5px dashed rgba(255,255,255,.45)\"></div><div style=\"position:absolute;top:66.66%;left:0;right:0;border-top:1.5px dashed rgba(255,255,255,.45)\"></div></div></div>",
+   "before_note": "Driving off<br>the page.",
+   "after_note": "Moving into<br>the space."
+  },
+  {
+   "title1": "Keep the horizon",
+   "title2": "off the middle",
+   "problem": "A horizon through the centre cuts your design in two equal halves.",
+   "fix": "Drop it to the lower third for sky, or lift it to the top third for ground.",
+   "before": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:linear-gradient(#8fd0ff 50%,#2f7a3a 50%)\"><div style=\"position:absolute;left:0;right:0;top:40px;text-align:center;color:#0b3a66;font-weight:800;font-size:22px\">Aburi Retreat</div><div style=\"position:absolute;left:0;right:0;bottom:30px;text-align:center;color:#fff;font-weight:600;font-size:13px\">000 000 0000</div></div>",
+   "after": "<div style=\"width:400px;height:500px;position:relative;overflow:hidden;font-family:M;background:linear-gradient(#1b6fd1 0%,#8fd0ff 66.6%,#2f7a3a 66.6%,#1d5426 100%)\"><div style=\"position:absolute;right:60px;top:70px;width:70px;height:70px;border-radius:50%;background:#ffe27a\"></div><div style=\"position:absolute;left:24px;top:150px;color:#fff;font-weight:900;font-size:40px;line-height:1\">Weekend<br>escape<span style=\"color:#ffe27a\">.</span></div><div style=\"position:absolute;left:26px;top:250px;color:#e8f4ff;font-weight:600;font-size:14px\">Aburi Retreat</div><div style=\"position:absolute;left:24px;bottom:30px;background:#ffe27a;color:#1d5426;font-weight:800;font-size:14px;padding:9px 14px;border-radius:20px\">Book · 000 000 0000</div><div style=\"position:absolute;inset:0;pointer-events:none\"><div style=\"position:absolute;left:33.33%;top:0;bottom:0;border-left:1.5px dashed rgba(255,255,255,.45)\"></div><div style=\"position:absolute;left:66.66%;top:0;bottom:0;border-left:1.5px dashed rgba(255,255,255,.45)\"></div><div style=\"position:absolute;top:33.33%;left:0;right:0;border-top:1.5px dashed rgba(255,255,255,.45)\"></div><div style=\"position:absolute;top:66.66%;left:0;right:0;border-top:1.5px dashed rgba(255,255,255,.45)\"></div></div></div>",
+   "before_note": "Split in<br>two halves.",
+   "after_note": "Sky gets<br>the stage."
+  }
+ ],
+ "recap": {
+  "l1": "Thirds-ready",
+  "l2": "looks like this",
+  "items": [
+   "Hero on a third line",
+   "Eyes on the top line",
+   "Space in front of the subject",
+   "Horizon off the middle"
+  ]
+ },
+ "cta": {
+  "l1": "Want a flyer",
+  "l2": "that just works?",
+  "text": "Let's design your next one with balance built in."
+ }
+}

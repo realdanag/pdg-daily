@@ -10,8 +10,8 @@
 - 09 · 2026-11-23 · Can they read it? (contrast)
 - 10 · 2026-11-24 · White space is not empty
 - 11 · 2026-11-27 · Most people see it on a phone (designing for small screens)
+- 12 · 2026-11-28 · Stop putting it in the middle (rule of thirds)
 # Backlog ideas (use in any order, add more):
-- The rule of thirds in flyers
 - Visual hierarchy: what to read first
 - Choosing a colour palette for your brand
 - Logo dos and don'ts

@@ -16,7 +16,9 @@ import sys, json, pathlib
 def E(t):
     """Headline end: question mark with gold dot, otherwise the round brand dot."""
     if t.rstrip().endswith('?'):
-        return t.rstrip()[:-1] + '</span><span class="qm"><span class="t l2">?</span><span class="b">?</span></span>'
+        h = t.rstrip()[:-1]; i = h.rfind(' ')
+        head, last = (h[:i+1], h[i+1:]) if i >= 0 else ('', h)
+        return head + '<span style="white-space:nowrap">' + last + '<span class="qm"><span class="t l2">?</span><span class="b">?</span></span></span></span>'
     return t + '</span><span class="dot"></span>'
 from playwright.sync_api import sync_playwright
 from PIL import Image
